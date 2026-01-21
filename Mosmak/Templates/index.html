@@ -51,7 +51,6 @@
           <li><a href="{% url 'index' %}" class="active">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'destinations' %}">Destinations</a></li>
-          <!-- <li><a href="tours.html">Tours</a></li> -->
           <li><a href="{% url 'gallery' %}">Gallery</a></li>
           
           <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -59,7 +58,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{% url 'destinations' %}">Book a Trip</a>
+      <a class="btn-getstarted" href="{% url 'contact' %}">Book a Trip</a>
 
     </div>
   </header>
@@ -354,7 +353,7 @@
                   <span>Serengeti</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="{%  url 'contact'%}" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -388,7 +387,7 @@
                   <span>Watamu</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -456,7 +455,7 @@
                   <span>Italy</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -490,7 +489,7 @@
                   <span>Aberdare</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -524,7 +523,7 @@
                   <span>Mt. Kenya</span>
                 </div>
                 <div class="tour-action">
-                  <a href="booking.html" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -539,10 +538,6 @@
           </div><!-- End Tour Item -->
 
         </div>
-
-        <!-- <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
-          <a href="tours.html" class="btn-view-all">View All Tours</a>
-        </div> -->
 
       </div>
 
@@ -613,20 +608,6 @@
               </div>
             </div><!-- End testimonial item -->
 
-            <!-- <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Our mission is to understand each traveler's dream and turn it into a personalized journey across Kenya's most stunning destinations</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="{% static 'images/img/person/person-f-12.webp' %}" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Head of Customer Experience &amp; Client Relations</h4>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
@@ -679,11 +660,11 @@
 
             <div class="action-section">
               <div class="main-actions">
-                <a href="destinations.html" class="btn btn-explore">
+                <a href="{% url 'destinations' %}" class="btn btn-explore">
                   <i class="bi bi-compass"></i>
                   Explore Now
                 </a>
-                <a href="destinations.html" class="btn btn-deals">
+                <a href="{% url 'destinations' %}" class="btn btn-deals">
                   <i class="bi bi-percent"></i>
                   View Deals
                 </a>
@@ -822,7 +803,7 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
+          <a href="{% url 'index' %}" class="d-flex align-items-center">
             <span class="sitename">Mosmak</span>
           </a>
           <div class="footer-contact pt-3">
@@ -837,21 +818,11 @@
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="tours.html">Tours</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
           </ul>
         </div>
-
-        <!-- <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-          </ul>
-        </div> -->
 
         <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>

@@ -58,7 +58,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{% url 'destinations' %}">Book a Trip</a>
+      <a class="btn-getstarted" href="#email-form">Book a Trip</a>
 
     </div>
   </header>
@@ -156,7 +156,7 @@
 {% endif %}
 
 
-              <form action="{% url 'inquiries' %}" method="post" class="php-email-form">  
+              <form action="{% url 'inquiries' %}" method="post" class="email-form">  
               {% csrf_token %}
               {% comment %} firstname section {% endcomment %}
                 <div class="row g-3">
@@ -316,7 +316,7 @@
       <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
+          <a href="{% url 'index' %}" class="d-flex align-items-center">
             <span class="sitename">Mosmak</span>
           </a>
           <div class="footer-contact pt-3">

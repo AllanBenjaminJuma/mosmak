@@ -51,7 +51,6 @@
           <li><a href="{% url 'index' %}" >Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'destinations' %}">Destinations</a></li>
-          <!-- <li><a href="tours.html">Tours</a></li> -->
           <li><a href="{% url 'gallery' %}">Gallery</a></li>
           
           <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -59,7 +58,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{% url 'destinations' %}">Book a Trip</a>
+      <a class="btn-getstarted" href="{% url 'contact' %}">Book a Trip</a>
 
     </div>
   </header>
@@ -67,13 +66,13 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/showcase-8.webp' %});">
       <div class="container position-relative">
         <h1>Destination Details</h1>
         <p>Discover unforgettable destinations where nature, culture, and adventure come together to create experiences that inspire, excite, and stay with you long after the journey ends.</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
             <li class="current">Destination Details</li>
           </ol>
         </nav>
@@ -89,7 +88,7 @@
         <div class="destination-hero" data-aos="fade-up" data-aos-delay="100">
   <div class="hero-slider">
     <div class="slides active">
-      <img src="assets/img/travel/eye-level-shot-two-giant-horned-african-buffalos-standing-dirty-unpaved-road-mosmak.jpg" alt="Buffalos Mosmak">
+      <img src="{% static 'images/img/travel/eye-level-shot-two-giant-horned-african-buffalos-standing-dirty-unpaved-road-mosmak.jpg' %}" alt="Buffalos Mosmak">
 
       <!-- Overlay Content -->
     <div class="hero-overlay">
@@ -100,7 +99,7 @@
     </div>
     </div>
     <div class="slides">
-      <img src="assets/img/travel/closeup-shot-silver-car-approaching-giraffe-safari-mosmak.jpg" alt="Giraffe mosmak">
+      <img src="{% static 'images/img/travel/closeup-shot-silver-car-approaching-giraffe-safari-mosmak.jpg' %}" alt="Giraffe mosmak">
       <!-- Overlay Content -->
     <div class="hero-overlay">
       <div class="hero-content">
@@ -110,22 +109,22 @@
     </div>
     </div>
     <div class="slides">
-      <img src="assets/img/travel/horizontal-shot-some-zebras-pasturing-grassland-clear-sky-mosmak.jpg" alt="Zebras Mosmak">
+      <img src="{% static 'images/img/travel/horizontal-shot-some-zebras-pasturing-grassland-clear-sky-mosmak.jpg' %}" alt="Zebras Mosmak">
       <!-- Overlay Content -->
     <div class="hero-overlay">
       <div class="hero-content">
         <h1>Tsavo Zebras</h1>
-        <p class="hero-tagline">Watch zebras roam freely across Tsavo’s endless plains, a timeless sight of Kenya’s wild beauty.</p>
+        <p class="hero-tagline">Watch zebras roam freely across Tsavo's endless plains, a timeless sight of Kenya's wild beauty.</p>
       </div>
     </div>
     </div>
     <div class="slides">
-      <img src="assets/img/travel/antelope mosmak.jpg" alt="Antelope Mosmak">
+      <img src="{% static 'images/img/travel/antelope mosmak.jpg' %}" alt="Antelope Mosmak">
       <!-- Overlay Content -->
     <div class="hero-overlay">
       <div class="hero-content">
         <h1>The Kenyan Antelope</h1>
-        <p class="hero-tagline">Agile and graceful, antelopes roam Kenya’s plains in a ballet of speed and elegance.</p>
+        <p class="hero-tagline">Agile and graceful, antelopes roam Kenya's plains in a ballet of speed and elegance.</p>
       </div>
     </div>
     </div>
@@ -153,7 +152,7 @@
     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
       <div class="attraction-item">
         <div class="attraction-image">
-          <img src="assets/img/travel/maasai-mara.png" alt="Maasai Mara Mosmak" class="img-fluid">
+          <img src="{% static 'images/img/travel/maasai-mara.png' %}" alt="Maasai Mara Mosmak" class="img-fluid">
         </div>
         <div class="attraction-content">
           <h4>Maasai Mara</h4>
@@ -164,29 +163,29 @@
     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
       <div class="attraction-item">
         <div class="attraction-image">
-          <img src="assets/img/travel/fort jesus mosmak.png" alt="Mombasa Old Town" class="img-fluid">
+          <img src="{% static 'images/img/travel/fort jesus mosmak.png' %}" alt="Mombasa Old Town" class="img-fluid">
         </div>
         <div class="attraction-content">
           <h4>Mombasa Old Town</h4>
-          <p>Explore the historic streets, Swahili architecture, and vibrant coastal culture of Mombasa’s heritage district.</p>
+          <p>Explore the historic streets, Swahili architecture, and vibrant coastal culture of Mombasa's heritage district.</p>
         </div>
       </div>
     </div>
     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
       <div class="attraction-item">
         <div class="attraction-image">
-          <img src="assets/img/travel/mt kenya mosmak.png" alt="Mount Kenya Mosmak" class="img-fluid">
+          <img src="{% static 'images/img/travel/mt kenya mosmak.png' %}" alt="Mount Kenya Mosmak" class="img-fluid">
         </div>
         <div class="attraction-content">
           <h4>Mount Kenya</h4>
-          <p>Kenya’s alpine gem, offering challenging climbs, stunning vistas, and unique afro-alpine ecosystems.</p>
+          <p>Kenya's alpine gem, offering challenging climbs, stunning vistas, and unique afro-alpine ecosystems.</p>
         </div>
       </div>
     </div>
     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
       <div class="attraction-item">
         <div class="attraction-image">
-          <img src="assets/img/travel/diani mosmak.png" alt="Diani Beach Mosmak" class="img-fluid">
+          <img src="{% static 'images/img/travel/diani mosmak.png' %}" alt="Diani Beach Mosmak" class="img-fluid">
         </div>
         <div class="attraction-content">
           <h4>Diani Beach</h4>
@@ -197,7 +196,7 @@
     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
       <div class="attraction-item">
         <div class="attraction-image">
-          <img src="assets/img/travel/lake-nakuru-mosmak.png" alt="Lake Nakuru Mosmak" class="img-fluid">
+          <img src="{% static 'images/img/travel/lake-nakuru-mosmak.png' %}" alt="Lake Nakuru Mosmak" class="img-fluid">
         </div>
         <div class="attraction-content">
           <h4>Lake Nakuru</h4>
@@ -208,11 +207,11 @@
     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
       <div class="attraction-item">
         <div class="attraction-image">
-          <img src="assets/img/travel/tsavo mosmak.jpg" alt="Tsavo National Park Mosmak" class="img-fluid">
+          <img src="{% static 'images/img/travel/tsavo mosmak.jpg' %}" alt="Tsavo National Park Mosmak" class="img-fluid">
         </div>
         <div class="attraction-content">
           <h4>Tsavo National Park</h4>
-          <p>Kenya’s iconic wildlife reserve, where vast wilderness meets abundant elephants, lions, and other African wildlife.</p>
+          <p>Kenya's iconic wildlife reserve, where vast wilderness meets abundant elephants, lions, and other African wildlife.</p>
         </div>
       </div>
     </div>
@@ -229,7 +228,7 @@
     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
       <div class="tour-card">
         <div class="tour-image">
-          <img src="assets/img/travel/maasai-mara.png" alt="Maasai Mara Safari" class="img-fluid">
+          <img src="{% static 'images/img/travel/maasai-mara.png' %}" alt="Maasai Mara Safari" class="img-fluid">
           <div class="tour-price">
             <span>$350</span>
           </div>
@@ -248,7 +247,7 @@
     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
       <div class="tour-card">
         <div class="tour-image">
-          <img src="assets/img/travel/beach mombasa mosmak.jpg" alt="Mombasa Cultural Tour" class="img-fluid">
+          <img src="{% static 'images/img/travel/beach mombasa mosmak.jpg' %}" alt="Mombasa Cultural Tour" class="img-fluid">
           <div class="tour-price">
             <span>$120</span>
           </div>
@@ -267,7 +266,7 @@
     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
       <div class="tour-card">
         <div class="tour-image">
-          <img src="assets/img/travel/diani mosmak.png" alt="Diani Beach Adventure" class="img-fluid">
+          <img src="{% static 'images/img/travel/diani mosmak.png' %}" alt="Diani Beach Adventure" class="img-fluid">
           <div class="tour-price">
             <span>$200</span>
           </div>
@@ -424,27 +423,27 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="gallery-item">
-          <img src="assets/img/travel/maasai-mara-safari.jpg" alt="Maasai Mara Safari" class="img-fluid">
+          <img src="{% static 'images/img/travel/maasai-mara-safari.jpg' %}" alt="Maasai Mara Safari" class="img-fluid">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="gallery-item">
-          <img src="assets/img/travel/mombasa-old-town.jpg" alt="Mombasa Old Town" class="img-fluid">
+          <img src="{% static 'images/img/travel/mombasa-old-town.jpg' %}" alt="Mombasa Old Town" class="img-fluid">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="gallery-item">
-          <img src="assets/img/travel/diani-beach.jpg" alt="Diani Beach" class="img-fluid">
+          <img src="{% static 'images/img/travel/diani-beach.jpg' %}" alt="Diani Beach" class="img-fluid">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="gallery-item">
-          <img src="assets/img/travel/mount-kenya.jpg" alt="Mount Kenya" class="img-fluid">
+          <img src="{% static 'images/img/travel/mount-kenya.jpg' %}" alt="Mount Kenya" class="img-fluid">
         </div>
       </div>
       <div class="swiper-slide">
         <div class="gallery-item">
-          <img src="assets/img/travel/lake-nakuru.jpg" alt="Lake Nakuru" class="img-fluid">
+          <img src="{% static 'images/img/travel/lake-nakuru.jpg' %}" alt="Lake Nakuru" class="img-fluid">
         </div>
       </div>
     </div>
@@ -490,14 +489,14 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Tour</span>
+          <a href="{% url 'index' %}" class="d-flex align-items-center">
+            <span class="sitename">Mosmak</span>
           </a>
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Kisumu</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254746708674</span></p>
+            <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
           </div>
         </div>
 
@@ -505,30 +504,20 @@
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <p>Follow us for quick updates and offers</p>
           <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="x.com"><i class="bi bi-twitter-x"></i></a>
+            <a href="facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="tiktok.com"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
 
@@ -536,13 +525,9 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://aben.co.ke/">Aben Technologies</a>
+        Designed by <a href="https://aben.co.ke">Aben Technologies</a>
       </div>
     </div>
 

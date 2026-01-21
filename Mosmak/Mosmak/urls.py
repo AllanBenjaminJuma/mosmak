@@ -25,7 +25,7 @@ urlpatterns = [
     path('about', views.about, name='about' ),
     path('destinations', views.destinations, name='destinations' ),
     path('gallery', views.gallery, name='gallery' ),
-    path('contact', views.contact, name='contact' ),
+    path('contact/', views.contact, name='contact' ),
     path('destination-details', views.destinationdetails, name='destination-details' ),
     
     path('inquiries/', include('inquiries.urls'))

@@ -53,7 +53,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{% url 'destinations' %}">Book a Trip</a>
+      <a class="btn-getstarted" href="{% url 'contact' %}">Book a Trip</a>
 
     </div>
   </header>
@@ -67,7 +67,7 @@
         <p>Every photo tells a story—discover the moments that make our travels unforgettable.</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
             <li class="current">Gallery</li>
           </ol>
         </nav>
@@ -257,7 +257,7 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <div class="gallery-actions">
                     <a href="{% static 'images/img/gallery/gallery-1.webp' %}" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                    <a href="{% url 'gallery' %}"><i class="bi bi-info-circle"></i></a>
                   </div>
                 </div>
               </div>
@@ -270,10 +270,10 @@
                 </div>
                 <div class="gallery-overlay">
                   <h4>Urban Landscape</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Urban</p>
                   <div class="gallery-actions">
                     <a href="{% static 'images/img/gallery/gallery-2.webp' %}" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -286,10 +286,10 @@
                 </div>
                 <div class="gallery-overlay">
                   <h4>Candid Moments</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Candid</p>
                   <div class="gallery-actions">
                     <a href="{% static 'images/img/gallery/gallery-3.webp' %}" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -302,10 +302,10 @@
                 </div>
                 <div class="gallery-overlay">
                   <h4>Wilderness</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Wild</p>
                   <div class="gallery-actions">
                     <a href="{% static 'images/img/gallery/gallery-4.webp' %}" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -318,10 +318,10 @@
                 </div>
                 <div class="gallery-overlay">
                   <h4>Modern Design</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Modern</p>
                   <div class="gallery-actions">
                     <a href="{% static 'images/img/gallery/gallery-5.webp' %}" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -334,10 +334,10 @@
                 </div>
                 <div class="gallery-overlay">
                   <h4>Portrait Studies</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Portrait</p>
                   <div class="gallery-actions">
                     <a href="{% static 'images/img/gallery/gallery-6.webp' %}" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -350,10 +350,10 @@
                 </div>
                 <div class="gallery-overlay">
                   <h4>Serene Waters</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Serenity</p>
                   <div class="gallery-actions">
                     <a href="{% static 'images/img/gallery/gallery-7.webp' %}" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -366,10 +366,10 @@
                 </div>
                 <div class="gallery-overlay">
                   <h4>Historical Places</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Historical</p>
                   <div class="gallery-actions">
                     <a href="{% static 'images/img/gallery/gallery-8.webp' %}" title="View Image" class="glightbox"><i class="bi bi-eye"></i></a>
-                    <a href="gallery-details.html"><i class="bi bi-info-circle"></i></a>
+                    
                   </div>
                 </div>
               </div>
@@ -421,8 +421,8 @@
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="tours.html">Tours</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about'  %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations' %}">Tours</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
           </ul>
         </div>

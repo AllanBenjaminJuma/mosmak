@@ -38,7 +38,7 @@
     <div
       class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
@@ -55,7 +55,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{% url 'destinations' %}">Book a Trip</a>
+      <a class="btn-getstarted" href="{% url 'contact' %}">Book a Trip</a>
 
     </div>
   </header>
@@ -69,7 +69,7 @@
         <p>Explore destinations that inspire and excite.</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
             <li class="current">Destinations</li>
           </ol>
         </nav>
@@ -302,7 +302,7 @@
                 <h3>Let Our Team Help Curate Your Perfect Expedition</h3>
                 <p>Unsure which destination aligns with your travel aspirations? Our seasoned travel advisors are poised to design a bespoke itinerary tailored just for you.</p>
                 <div class="assistance-actions">
-                  <a href="contact.html#contact-form" class="btn btn-primary">Receive Complimentary Consultation</a>
+                  <a href="{% url 'contact'%}.#contact-form" class="btn btn-primary">Receive Complimentary Consultation</a>
                   <a href="#" class="btn btn-outline">Explore All Available Tours</a>
                 </div>
               </div>
@@ -321,7 +321,7 @@
       <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
+          <a href="{% url 'index' %}" class="d-flex align-items-center">
             <span class="sitename">Mosmak</span>
           </a>
           <div class="footer-contact pt-3">
@@ -336,8 +336,8 @@
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="tours.html">Tours</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations' %}">Tours</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
           </ul>
         </div>
