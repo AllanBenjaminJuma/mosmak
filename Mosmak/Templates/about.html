@@ -1,0 +1,429 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mosmak Tours &amp; Travel</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+</head>
+
+<body class="about-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <h1 class="sitename">Mosmak</h1>
+      </a>
+
+       <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}"class="active">About</a></li>
+          <li><a href="{% url 'destinations' %}">Destinations</a></li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{% url 'destinations' %}">Book a Trip</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade"
+      style="background-image: url({% static 'images/img/travel/showcase-8.webp' %});">
+      <div class="container position-relative">
+        <h1>About</h1>
+        <p>Unforgettable Adventures with a commitment to safety, comfort, and eco-friendly travel.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">About</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Travel About Section -->
+    <section id="travel-about" class="travel-about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center mb-5">
+            <div class="intro-content" data-aos="fade-up" data-aos-delay="200">
+              <h2>Redefining Travel,<br>One Adventure at a Time</h2>
+              <p class="lead">Born from a love of exploration and discovery, we've spent the last decade turning
+                wanderlust into life-changing experiences for adventurous souls around the globe.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="300">
+            <div class="hero-image">
+              <img src="{% static 'images/img/travel/beach-sea-ocean-with-coconut-palm-tree-sunrise-time mosmak.jpg' %}" class="img-fluid" alt="Travel Adventure Mosmak">
+              <div class="floating-stats">
+                <div class="stat-item">
+                  <span class="number">5+</span>
+                  <span class="label">Countries</span>
+                </div>
+                <div class="stat-item">
+                  <span class="number">1.2K</span>
+                  <span class="label">Happy Travelers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 offset-lg-1" data-aos="slide-left" data-aos-delay="400">
+            <div class="story-content">
+              <div class="story-badge">
+                <i class="bi bi-compass"></i>
+                <span>Our Story</span>
+              </div>
+              <h3>Experience Travel, the Mosmak Way</h3>
+              <p>Mosmak Tours & Travel began as a simple love for exploring Kenya's hidden gems—road trips, hikes, and
+                coast adventures shared among friends. What started as casual escapes has grown into a dedicated travel
+                brand committed to showcasing the true beauty of Kenya.
+
+                We believe travel is more than movement; it's connection. Connection to culture, to nature, to people,
+                and to unforgettable moments. Every journey we design supports local communities, celebrates Kenya's
+                rich heritage, and encourages responsible tourism.
+
+                Our team works closely with experienced local guides and community partners to bring you authentic,
+                meaningful experiences—far beyond what the typical tourist sees. At Mosmak, every adventure is crafted
+                with passion, purpose, and a deep respect for the places we visit.</p>
+
+              <div class="mission-box">
+                <div class="mission-icon">
+                  <i class="bi bi-globe-americas"></i>
+                </div>
+                <div class="mission-text">
+                  <h4>Our Vision</h4>
+                  <p>"To craft authentic Kenyan adventures that inspire, transform, and sustain."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="200">
+              <div class="section-header text-center mb-5">
+                <h3>Why Travelers Choose Us</h3>
+                <p>The Six Foundations of Every Mosmak Adventure</p>
+              </div>
+
+              <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                  <div class="feature-card">
+                    <div class="feature-front">
+                      <div class="feature-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                      </div>
+                      <h4>Adventure with Confidence</h4>
+                      <p>Comprehensive safety protocols and emergency support</p>
+                    </div>
+                    <div class="feature-back">
+                      <p>We prepare you with pre-trip safety briefings and support you with 24/7 emergency response.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="feature-card">
+                    <div class="feature-front">
+                      <div class="feature-icon">
+                        <i class="bi bi-people"></i>
+                      </div>
+                      <h4>Local Partnerships</h4>
+                      <p>Connecting travelers with local culture</p>
+                    </div>
+                    <div class="feature-back">
+                      <p>We work hand-in-hand with local guides and communities, sharing their stories and traditions
+                        while supporting
+                        sustainable livelihoods and vibrant local economies.</p>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                  <div class="feature-card">
+                    <div class="feature-front">
+                      <div class="feature-icon">
+                        <i class="bi bi-recycle"></i>
+                      </div>
+                      <h4>Carbon Conscious</h4>
+                      <p>Eco-Friendly travel, Reducing our environmental footprint</p>
+                    </div>
+                    <div class="feature-back">
+                      <p>We partner with eco-conscious initiatives to restore natural habitats and promote sustainability across all our travel experiences.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                  <div class="feature-card">
+                    <div class="feature-front">
+                      <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                      </div>
+                    <h4>Flexible Travel</h4>
+                    <p>Plans change, we've got you covered</p>
+                    </div>
+                    <div class="feature-back">
+                      <p>With free cancellation up to 30 days before departure, simple date changes, and inclusive travel insurance options,you can enjoy your journey worry-free.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="feature-card">
+                    <div class="feature-front">
+                      <div class="feature-icon">
+                        <i class="bi bi-sliders"></i>
+                      </div>
+                      <h4>Personalized Journeys</h4>
+                      <p>Adventures made just for you</p>
+                      </div>
+                      <div class="feature-back">
+                        <p>Every trip is crafted around your interests, travel style, and activity level—ensuring a unique experience that's truly yours.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                  <div class="feature-card">
+                    <div class="feature-front">
+                      <div class="feature-icon">
+                        <i class="bi bi-star"></i>
+                      </div>
+                      <h4>Unforgettable Moments</h4>
+                      <p>Journeys that leave a lasting impression</p>
+                      </div>
+                      <div class="feature-back">
+                        <p>Our trips are designed to create meaningful experiences that stay with you long after the adventure ends, leaving memories to cherish for a lifetime.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="journey-timeline" data-aos="fade-up" data-aos-delay="200">
+              <div class="timeline-header text-center mb-5">
+                <h3>Milestones in Our Adventure</h3>
+                <p>Celebrating the key moments and achievements that have defined Mosmak Tours & Travel and shaped our journey to delivering unforgettable experiences across Kenya.</p>
+              </div>
+
+              <div class="timeline-container">
+                <div class="timeline-track"></div>
+
+                <div class="timeline-milestone" data-aos="slide-right" data-aos-delay="300">
+                  <div class="milestone-marker">
+                    <span class="year">2015</span>
+                  </div>
+                  <div class="milestone-content">
+                    <h4>The Beginning</h4>
+                    <p>Driven by a passion to showcase Kenya's rich landscapes and cultures responsibly, our team came together to create Mosmak Tours & Travel—turning the dream of meaningful, sustainable adventures into a reality for travelers everywhere.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-milestone" data-aos="slide-left" data-aos-delay="400">
+                  <div class="milestone-marker">
+                    <span class="year">2018</span>
+                  </div>
+                  <div class="milestone-content">
+                    <h4>Global Expansion</h4>
+                    <p>We forged partnerships with local guides across Southeast Asia and South America, extending our mission to create meaningful, responsible travel experiences beyond Kenya's borders.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-milestone" data-aos="slide-right" data-aos-delay="500">
+                  <div class="milestone-marker">
+                    <span class="year">2021</span>
+                  </div>
+                  <div class="milestone-content">
+                    <h4>Supporting Local Lives</h4>
+                    <p>Through our sustainable tourism initiatives, we empower local communities—creating meaningful employment and fair-trade partnerships that directly benefit hundreds of families.</p>
+
+                  </div>
+                </div>
+
+                <div class="timeline-milestone" data-aos="slide-left" data-aos-delay="600">
+                  <div class="milestone-marker">
+                    <span class="year">2025</span>
+                  </div>
+                  <div class="milestone-content">
+                    <h4>Recognized for Excellence</h4>
+                    <p>Nominated for the prestigious Tourism Excellence Awards 2025, Mosmak Tours & Travel continues to set the standard for outstanding service, innovation, and unforgettable travel experiences.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="cta-banner" data-aos="zoom-in" data-aos-delay="300">
+              <div class="cta-overlay">
+                <div class="cta-content">
+                  <h3>Your Next Adventure Awaits</h3>
+                  <p>Be part of the adventure—travel responsibly and create memories with Mosmak Tours and Travel.</p>
+                  <div class="cta-buttons">
+                    <a href="destinations.html" class="btn btn-primary me-3">Explore Our Destinations</a>
+                    <a href="contact.html" class="btn btn-outline">Chat with an Expert</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Travel About Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="" method="post" class="">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe">
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Mosmak</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>Kisumu</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254746708674</span></p>
+            <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations' %}">Tours</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+          </ul>
+        </div> -->
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Follow us for quick updates and offers</p>
+          <div class="social-links d-flex">
+            <a href="x.com"><i class="bi bi-twitter-x"></i></a>
+            <a href="facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="tiktok.com"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak Tours and Travel</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        
+        Designed and developed by <a href="https://aben.co.ke" target="_blank">Aben Technologies</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+   <!-- JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js'%} "></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%} "></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js '%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

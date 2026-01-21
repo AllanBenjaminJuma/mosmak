@@ -1,0 +1,575 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mosmak Tours &amp; Travel</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+ 
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
+        
+        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <h1 class="sitename">Mosmak</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'destinations' %}">Destinations</a></li>
+          <!-- <li><a href="tours.html">Tours</a></li> -->
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{% url 'destinations' %}">Book a Trip</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+      <div class="container position-relative">
+        <h1>Destination Details</h1>
+        <p>Discover unforgettable destinations where nature, culture, and adventure come together to create experiences that inspire, excite, and stay with you long after the journey ends.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Destination Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Travel Destination Details Section -->
+    <section id="travel-destination-details" class="travel-destination-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Hero Section -->
+        <div class="destination-hero" data-aos="fade-up" data-aos-delay="100">
+  <div class="hero-slider">
+    <div class="slides active">
+      <img src="assets/img/travel/eye-level-shot-two-giant-horned-african-buffalos-standing-dirty-unpaved-road-mosmak.jpg" alt="Buffalos Mosmak">
+
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>The Mara Buffalos</h1>
+        <p class="hero-tagline">Feel the raw power of the wild as towering buffalo herds dominate the endless plains</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="assets/img/travel/closeup-shot-silver-car-approaching-giraffe-safari-mosmak.jpg" alt="Giraffe mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Giraffe</h1>
+        <p class="hero-tagline">With each stride, giraffes bring charm and majesty to the savannah.</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="assets/img/travel/horizontal-shot-some-zebras-pasturing-grassland-clear-sky-mosmak.jpg" alt="Zebras Mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Tsavo Zebras</h1>
+        <p class="hero-tagline">Watch zebras roam freely across Tsavo’s endless plains, a timeless sight of Kenya’s wild beauty.</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="assets/img/travel/antelope mosmak.jpg" alt="Antelope Mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>The Kenyan Antelope</h1>
+        <p class="hero-tagline">Agile and graceful, antelopes roam Kenya’s plains in a ballet of speed and elegance.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Overview Section -->
+<div class="destination-overview" data-aos="fade-up" data-aos-delay="200">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <h2>Discover Kenya's Wonders</h2>
+      <p>From the golden savannahs of the Maasai Mara to the pristine beaches of Malindi, Kenya offers breathtaking landscapes, rich culture, and unforgettable wildlife experiences. Explore ancient heritage sites, vibrant cities, and natural wonders that promise adventure and memories for a lifetime.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Attractions Section -->
+<div class="attractions-section" data-aos="fade-up" data-aos-delay="300">
+  <div class="section-header">
+    <h2>Must-Visit Attractions</h2>
+    <p>Experience the best of Kenya's iconic destinations</p>
+  </div>
+  <div class="row gy-4">
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+      <div class="attraction-item">
+        <div class="attraction-image">
+          <img src="assets/img/travel/maasai-mara.png" alt="Maasai Mara Mosmak" class="img-fluid">
+        </div>
+        <div class="attraction-content">
+          <h4>Maasai Mara</h4>
+          <p>Vast savannahs teeming with wildlife, offering unforgettable safari adventures and the Great Migration spectacle.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+      <div class="attraction-item">
+        <div class="attraction-image">
+          <img src="assets/img/travel/fort jesus mosmak.png" alt="Mombasa Old Town" class="img-fluid">
+        </div>
+        <div class="attraction-content">
+          <h4>Mombasa Old Town</h4>
+          <p>Explore the historic streets, Swahili architecture, and vibrant coastal culture of Mombasa’s heritage district.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+      <div class="attraction-item">
+        <div class="attraction-image">
+          <img src="assets/img/travel/mt kenya mosmak.png" alt="Mount Kenya Mosmak" class="img-fluid">
+        </div>
+        <div class="attraction-content">
+          <h4>Mount Kenya</h4>
+          <p>Kenya’s alpine gem, offering challenging climbs, stunning vistas, and unique afro-alpine ecosystems.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+      <div class="attraction-item">
+        <div class="attraction-image">
+          <img src="assets/img/travel/diani mosmak.png" alt="Diani Beach Mosmak" class="img-fluid">
+        </div>
+        <div class="attraction-content">
+          <h4>Diani Beach</h4>
+          <p>White sandy beaches, turquoise waters, and palm-fringed shores perfect for sun, relaxation, and water sports.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+      <div class="attraction-item">
+        <div class="attraction-image">
+          <img src="assets/img/travel/lake-nakuru-mosmak.png" alt="Lake Nakuru Mosmak" class="img-fluid">
+        </div>
+        <div class="attraction-content">
+          <h4>Lake Nakuru</h4>
+          <p>Home to thousands of flamingos and diverse wildlife, a haven for bird watchers and nature enthusiasts.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+      <div class="attraction-item">
+        <div class="attraction-image">
+          <img src="assets/img/travel/tsavo mosmak.jpg" alt="Tsavo National Park Mosmak" class="img-fluid">
+        </div>
+        <div class="attraction-content">
+          <h4>Tsavo National Park</h4>
+          <p>Kenya’s iconic wildlife reserve, where vast wilderness meets abundant elephants, lions, and other African wildlife.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tours Available Section -->
+<div class="tours-section" data-aos="fade-up" data-aos-delay="400">
+  <div class="section-header">
+    <h2>Available Tours &amp; Experiences</h2>
+    <p>Choose from our carefully curated selection of Kenyan adventures</p>
+  </div>
+  <div class="row gy-4">
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="tour-card">
+        <div class="tour-image">
+          <img src="assets/img/travel/maasai-mara.png" alt="Maasai Mara Safari" class="img-fluid">
+          <div class="tour-price">
+            <span>$350</span>
+          </div>
+        </div>
+        <div class="tour-content">
+          <div class="tour-meta">
+            <span class="duration"><i class="bi bi-clock"></i> 3 days</span>
+            <span class="rating"><i class="bi bi-star-fill"></i> 4.9</span>
+          </div>
+          <h4>Maasai Mara Safari</h4>
+          <p>Experience the iconic safari adventure with guided wildlife tours, luxury tents, and unforgettable sunsets.</p>
+          <a href="#" class="btn-tour">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="tour-card">
+        <div class="tour-image">
+          <img src="assets/img/travel/beach mombasa mosmak.jpg" alt="Mombasa Cultural Tour" class="img-fluid">
+          <div class="tour-price">
+            <span>$120</span>
+          </div>
+        </div>
+        <div class="tour-content">
+          <div class="tour-meta">
+            <span class="duration"><i class="bi bi-clock"></i> 1 day</span>
+            <span class="rating"><i class="bi bi-star-fill"></i> 4.8</span>
+          </div>
+          <h4>Mombasa Cultural Tour</h4>
+          <p>Explore Mombasa Old Town, Fort Jesus, and local markets with a guided cultural experience.</p>
+          <a href="#" class="btn-tour">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="tour-card">
+        <div class="tour-image">
+          <img src="assets/img/travel/diani mosmak.png" alt="Diani Beach Adventure" class="img-fluid">
+          <div class="tour-price">
+            <span>$200</span>
+          </div>
+        </div>
+        <div class="tour-content">
+          <div class="tour-meta">
+            <span class="duration"><i class="bi bi-clock"></i> 2 days</span>
+            <span class="rating"><i class="bi bi-star-fill"></i> 4.7</span>
+          </div>
+          <h4>Diani Beach Adventure</h4>
+          <p>Relax, snorkel, and enjoy water sports along the pristine shores of Diani with expert guides.</p>
+          <a href="#" class="btn-tour">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Interactive Map Section -->
+<div class="map-section" data-aos="fade-up" data-aos-delay="500">
+  <div class="section-header">
+    <h2>Explore Kenya</h2>
+    <p>Interactive map with key attractions and tour meeting points</p>
+  </div>
+  <div class="map-container">
+    <div class="map-embed">
+      <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1590213.4297028097!2d37.906193!3d-0.023559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1783a87c0c6d0e1f%3A0x8c6e3e8c6d4b9d77!2sKenya!5e0!3m2!1sen!2ske!4v1700000000000"
+  width="100%"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
+    <div class="map-points">
+      <div class="point-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Maasai Mara - Main Gate</span>
+      </div>
+      <div class="point-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Mombasa Old Town - Fort Jesus</span>
+      </div>
+      <div class="point-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Mount Kenya - Base Camp</span>
+      </div>
+      <div class="point-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Diani Beach - Main Beach</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Practical Information Section -->
+<div class="practical-info" data-aos="fade-up" data-aos-delay="600">
+  <div class="section-header">
+    <h2>Essential Travel Information</h2>
+    <p>Everything you need to know for your Kenyan adventure</p>
+  </div>
+  <div class="row gy-4">
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="bi bi-calendar-event"></i>
+        </div>
+        <h4>Best Time to Visit</h4>
+        <p>July to October for wildlife safaris. December to March for coastal and beach adventures.</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="bi bi-thermometer-sun"></i>
+        </div>
+        <h4>Weather &amp; Climate</h4>
+        <p>Tropical climate on the coast, temperate in highlands, and semi-arid in the savannah regions.</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="bi bi-currency-dollar"></i>
+        </div>
+        <h4>Currency &amp; Language</h4>
+        <p>Kenyan Shilling (KES) is the official currency. English and Swahili are widely spoken.</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="bi bi-passport"></i>
+        </div>
+        <h4>Visa Requirements</h4>
+        <p>Most travelers require a valid passport and eVisa, which can be obtained online before arrival.</p>
+      </div>
+    </div>
+  </div>
+  <div class="travel-tips" data-aos="fade-up" data-aos-delay="500">
+    <h3>Local Tips &amp; Cultural Insights</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="tips-list">
+          <li><i class="bi bi-check-circle"></i> Book safari accommodations early, especially during peak season</li>
+          <li><i class="bi bi-check-circle"></i> Wear comfortable walking shoes for city tours and nature walks</li>
+          <li><i class="bi bi-check-circle"></i> Carry sun protection—Kenya can be very sunny</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="tips-list">
+          <li><i class="bi bi-check-circle"></i> Respect local customs and dress codes, especially in rural areas</li>
+          <li><i class="bi bi-check-circle"></i> Try local dishes like ugali, nyama choma, and fresh seafood</li>
+          <li><i class="bi bi-check-circle"></i> Use local guides to enrich cultural and wildlife experiences</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Photo Gallery Section -->
+<div class="gallery-section" data-aos="fade-up" data-aos-delay="700">
+  <div class="section-header">
+    <h2>Gallery</h2>
+    <p>Immerse yourself in the beauty of Kenya</p>
+  </div>
+  <div class="gallery-slider swiper init-swiper">
+    <script type="application/json" class="swiper-config">
+      {
+        "loop": true,
+        "speed": 600,
+        "autoplay": {
+          "delay": 4000
+        },
+        "slidesPerView": 1,
+        "breakpoints": {
+          "768": {
+            "slidesPerView": 2
+          },
+          "992": {
+            "slidesPerView": 3
+          }
+        },
+        "pagination": {
+          "el": ".swiper-pagination",
+          "type": "bullets",
+          "clickable": true
+        }
+      }
+    </script>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="gallery-item">
+          <img src="assets/img/travel/maasai-mara-safari.jpg" alt="Maasai Mara Safari" class="img-fluid">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallery-item">
+          <img src="assets/img/travel/mombasa-old-town.jpg" alt="Mombasa Old Town" class="img-fluid">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallery-item">
+          <img src="assets/img/travel/diani-beach.jpg" alt="Diani Beach" class="img-fluid">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallery-item">
+          <img src="assets/img/travel/mount-kenya.jpg" alt="Mount Kenya" class="img-fluid">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallery-item">
+          <img src="assets/img/travel/lake-nakuru.jpg" alt="Lake Nakuru" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="cta-section" data-aos="fade-up" data-aos-delay="800">
+  <div class="row">
+    <div class="col-lg-8 mx-auto text-center">
+      <h2>Ready to Explore Kenya?</h2>
+      <p>Let our travel experts help you create the perfect Kenyan itinerary tailored to your interests and budget.</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary">View All Tours</a>
+        <a href="#" class="btn btn-outline">Contact Travel Expert</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Tour</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://aben.co.ke/">Aben Technologies</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js'%} "></>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%} "></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js '%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</script>
+
+
+</body>
+
+</html>
