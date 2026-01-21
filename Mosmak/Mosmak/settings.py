@@ -139,7 +139,7 @@ EMAIL_PORT = 465
 
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
-EMAIL_HOST_USER = "info@mosmak.co.ke"
-EMAIL_HOST_PASSWORD = "Mosmak@@1" 
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD =  os.getenv("EMAIL_HOST_PASSWORD")
 
-DEFAULT_FROM_EMAIL = 'Mosmak Tours <info@mosmak.co.ke>'
+DEFAULT_FROM_EMAIL = f'Mosmak Tours <{os.getenv("EMAIL_HOST_USER")}>'
