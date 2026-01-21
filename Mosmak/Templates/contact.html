@@ -25,6 +25,11 @@
   <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
 
+
+  {% comment %} CSS library {% endcomment %}
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.min.css"/>
+
+
   <!-- Main CSS File -->
   <link href="{% static 'css/main.css' %}" rel="stylesheet">
 
@@ -67,7 +72,7 @@
         <p>We'd love to hear from you! Whether you have questions, want to plan your next adventure, or just want to say hello, our team is here to help.</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{url 'index'}">Home</a></li>
             <li class="current">Contact</li>
           </ol>
         </nav>
@@ -141,28 +146,63 @@
                 Our team will get back to you shortly.
               </div>
               {% endif %}
+              
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success text-center mb-4">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
 
               <form action="{% url 'inquiries' %}" method="post" class="php-email-form">  
               {% csrf_token %}
+              {% comment %} firstname section {% endcomment %}
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="input-with-icon">
                         <i class="bi bi-person"></i>
-                        <input type="text" class="form-control" name="name" placeholder="Name" required="">
+                        <input type="text" class="form-control" name="name" placeholder="Fullname" required="true">
                       </div>
                     </div>
                   </div>
-
+                  
+                  {% comment %} email section {% endcomment %}
                   <div class="col-md-6">
                     <div class="form-group">
                       <div class="input-with-icon">
                         <i class="bi bi-envelope"></i>
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="true">
                       </div>
                     </div>
                   </div>
 
+                  {% comment %} Phone number section {% endcomment %}
+                  <div class="col-md-6">
+  <div class="form-group">
+  <label class="form-label fw-semibold">
+    Phone Number
+    <small class="text-muted">(Include country code, e.g. +254)</small>
+  </label>
+
+  <div class="input-group">
+    <span class="input-group-text">+</span>
+    <input
+      type="tel"
+      name="phone"
+      class="form-control"
+      placeholder="254712345678"
+      pattern="^\d{9,15}$"
+      inputmode="numeric"
+      required="true"
+    ></div>
+
+  </div>
+</div>
+
+                  {% comment %} the email subject {% endcomment %}
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-with-icon">
@@ -171,7 +211,55 @@
                       </div>
                     </div>
                   </div>
+{% comment %} the date of arrival in Kenya {% endcomment %}
+              <div class="col-md-6">
+  <div class="form-group">
+    <label class="form-label fw-semibold">When are you arriving?</label>
+    <div class="input-with-icon">
+      <i class="bi bi-calendar-event"></i>
+      <input type="date" class="form-control" name="arrival_date" required min="{% now 'Y-m-d' %}">
+    </div>
+  </div>
+</div>
 
+{% comment %} Number of adults {% endcomment %}
+<div class="col-md-3">
+  <div class="form-group">
+    <label class="form-label fw-semibold">Adults</label>
+    <div class="input-with-icon">
+      <i class="bi bi-person"></i>
+      <input type="number" class="form-control" name="adults" min="1" value="1" required>
+    </div>
+  </div>
+</div>
+
+
+{% comment %} Number of children {% endcomment %}
+<div class="col-md-3">
+  <div class="form-group">
+    <label class="form-label fw-semibold">Children</label>
+    <div class="input-with-icon">
+      <i class="bi bi-people"></i>
+      <input type="number" class="form-control" name="children" min="0" value="0">
+    </div>
+  </div>
+</div>
+
+{% comment %} comments days in Kenya {% endcomment %}
+
+<div class="col-md-6">
+  <div class="form-group">
+    <label class="form-label fw-semibold">How many days will you be in Kenya?</label>
+    <div class="input-with-icon">
+      <i class="bi bi-clock-history"></i>
+      <input type="number" class="form-control" name="days_in_kenya" min="1" placeholder="e.g. 5" required>
+    </div>
+  </div>
+</div>
+
+
+
+                  {% comment %} the message {% endcomment %}
                   <div class="col-12">
                     <div class="form-group">
                       <div class="input-with-icon">
@@ -191,6 +279,10 @@
                     <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
                   </div>
                 </div>
+                <div style="display:none;">
+  <input type="text" name="company" tabindex="-1" autocomplete="off">
+</div>
+
               </form>
             </div>
           </div>
@@ -297,6 +389,8 @@
   <!-- Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
 </body>
 
 </html>

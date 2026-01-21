@@ -186,4 +186,5 @@
     slides[currentSlide].classList.add('active');
   }, 4000);
 
+  
 })();

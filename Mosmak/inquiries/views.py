@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
@@ -14,18 +15,38 @@ def inquiry_view(request):
     if request.method == 'POST':
         name = request.POST.get("name")
         email = request.POST.get("email")
+        phone = request.POST.get("phone")
         subject = request.POST.get("subject")
         message = request.POST.get("message")
+        adults = request.POST.get("adults")
+        arrival_date = request.POST.get("arrival_date")
+        children = request.POST.get("children")
+        days_in_kenya = request.POST.get("days_in_kenya")
         
         full_message = f"""
         New Safari Inquiry
         
         Name: {name}
         Email: {email}
+        Phone: {phone}
         Subject: {subject}
         
+        
+        Arrival in Kenya:
+        {arrival_date}
+        
+        Days in Kenya:
+        {days_in_kenya}
+        
+        Adults:
+        {adults}
+        
+        Children:
+        {children}
+
         Message:
         {message}
+        
         """
         
         send_mail(
@@ -34,9 +55,12 @@ def inquiry_view(request):
             from_email= settings.DEFAULT_FROM_EMAIL,
             recipient_list = ["info@mosmak.co.ke"],
         )
-        return render(request, "contact.html", {"success": True})
+        
+        messages.success(request, 'Your inquiry has been sent successfully. Our Team will contact you within 12 hours.')
+        
+        return redirect('contact')
     
-    return redirect(contact)
+    return redirect('contact')
 
 # Test View to test that emails are sent.
 def test_email(request):
