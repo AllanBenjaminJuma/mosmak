@@ -26,7 +26,18 @@ urlpatterns = [
     path('destinations', views.destinations, name='destinations' ),
     path('gallery', views.gallery, name='gallery' ),
     path('contact/', views.contact, name='contact' ),
+    path('kenya', views.kenya, name='kenya' ),
+    path('tanzania', views.tanzania, name='tanzania' ),
+    path('general', views.general, name='general' ),
+    path('privacy', views.privacy, name='privacy_policy' ),
     path('destination-details', views.destinationdetails, name='destination-details' ),
+    path('destination-details-mara', views.destinationmara, name='destination-details-mara' ),
+    path('destination-details-amboseli', views.destinationamboseli, name='destination-details-amboseli' ),
+    path('destination-details-tsavo-east', views.destinationtsavoeast, name='destination-details-tsavo-east' ),
+    path('destination-details-tsavo-west', views.destinationtsavowest, name='destination-details-tsavo-west' ),
+    path('destination-details-aberdare', views.destinationaberdare, name='destination-details-aberdare' ),
+    path('destination-details-hells-gate', views.destinationhellsgate, name='destination-details-hells-gate' ),
+    path('destination-details-zanzibar', views.destinationzanzibar, name='destination-details-zanzibar' ),
     
     path('inquiries/', include('inquiries.urls'))
 ]

@@ -3,9 +3,10 @@
 <html lang="en">
 
 <head>
+   
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mosmak</title>
+  <title>Mosmak Tours &amp; Travel</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -25,28 +26,27 @@
   <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
 
-
-  {% comment %} CSS library {% endcomment %}
-  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.min.css"/>
-
-
   <!-- Main CSS File -->
   <link href="{% static 'css/main.css' %}" rel="stylesheet">
 
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+ 
 </head>
 
-<body class="gallery-page">
+<body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div
-      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
+        
         <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
-       <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{% url 'index' %}" >Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
@@ -56,19 +56,19 @@
     <i class="bi bi-chevron-down toggle-dropdown"></i>
   </a>
   <ul>
-    <li><a href="{% url 'kenya' %}">Kenya</a></li>
+   <li><a href="{% url 'kenya' %}">Kenya</a></li>
     <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
     <li><a href="{% url 'general' %}">General Tours</a></li>
   </ul>
 </li>
           <li><a href="{% url 'gallery' %}">Gallery</a></li>
           
-          <li><a href="{% url 'contact' %}" class="active">Contact</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#email-form">Book a Trip</a>
+      <a class="btn-getstarted" href="{% url 'contact' %}.#contact-form">Book a Trip</a>
 
     </div>
   </header>
@@ -78,79 +78,140 @@
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/showcase-8.webp' %});">
       <div class="container position-relative">
-        <h1>Contact</h1>
-        <p>We'd love to hear from you! Whether you have questions, want to plan your next adventure, or just want to say hello, our team is here to help.</p>
+        <h1>Destination Details</h1>
+        <p>Discover unforgettable destinations where nature, culture, and adventure come together to create experiences that inspire, excite, and stay with you long after the journey ends.</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{url 'index'}">Home</a></li>
-            <li class="current">Contact</li>
+            <li><a href="{% url 'destinations' %}">Destinations</a></li>
+            <li><a href="{% url 'kenya' %}">Kenya</a></li>
+            <li class="current">Tsavo East National Park</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- Travel Destination Details Section -->
+    <section id="travel-destination-details" class="travel-destination-details section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <!-- Contact Info Boxes -->
-        <div class="row gy-4 mb-5">
-          <a href="https://wa.me/254701800394" target="_blank" class="contact-info-box">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-info-box">
-              <div class="icon-box">
-                <i class="bi bi-whatsapp"></i>
-              </div>
-              <div class="info-content">
-                <h4>Whatsapp</h4>
-                <p>+254701800394</p>
-              </div>
-            </div>
-          </a>
-          </div>
+        <!-- Hero Section -->
+        <div class="destination-hero" data-aos="fade-up" data-aos-delay="100">
+  <div class="hero-slider">
+    <div class="slides active">
+      <img src="{% static 'images/img/travel/eye-level-shot-two-giant-horned-african-buffalos-standing-dirty-unpaved-road-mosmak.jpg' %}" alt="Buffalos Mosmak">
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="contact-info-box">
-              <div class="icon-box">
-                <i class="bi bi-envelope"></i>
-              </div>
-              <div class="info-content">
-                <h4>Email Address</h4>
-                <p>info@mosmak.co.ke</p>
-                <p>travel@mosmak.co.ke</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="contact-info-box">
-              <div class="icon-box">
-                <i class="bi bi-headset"></i>
-              </div>
-              <div class="info-content">
-                <h4>Hours of Operation</h4>
-                <p>Sunday-Fri: 9 AM - 6 PM</p>
-                <p>Saturday: 9 AM - 4 PM</p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>The Mara Buffalos</h1>
+        <p class="hero-tagline">Feel the raw power of the wild as towering buffalo herds dominate the endless plains</p>
       </div>
-
-      <!-- Google Maps (Full Width) -->
-      <div class="map-section" data-aos="fade-up" data-aos-delay="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255348.0987477005!2d34.580166509138955!3d-0.08389799184910458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa437ad4ac81d%3A0x2012a439d6248dd2!2sKisumu!5e0!3m2!1sen!2ske!4v1765540168091!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/closeup-shot-silver-car-approaching-giraffe-safari-mosmak.jpg' %}" alt="Giraffe mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Giraffe</h1>
+        <p class="hero-tagline">With each stride, giraffes bring charm and majesty to the savannah.</p>
       </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/horizontal-shot-some-zebras-pasturing-grassland-clear-sky-mosmak.jpg' %}" alt="Zebras Mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Tsavo Zebras</h1>
+        <p class="hero-tagline">Watch zebras roam freely across Tsavo's endless plains, a timeless sight of Kenya's wild beauty.</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/antelope mosmak.jpg' %}" alt="Antelope Mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>The Kenyan Antelope</h1>
+        <p class="hero-tagline">Agile and graceful, antelopes roam Kenya's plains in a ballet of speed and elegance.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 
+
+      <!--Amboseli National Park Overview Section -->
+<div class="destination-overview" data-aos="fade-up" data-aos-delay="200">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+<h2>Tsavo West National Park: A Land of Contrasts and Wildlife Wonders</h2>
+
+Located in southeastern Kenya along the Nairobi–Mombasa corridor, Tsavo West National Park is a dramatic and diverse wilderness known for its rugged terrain, volcanic landscapes, and exceptional wildlife encounters. Covering approximately 9,065 square kilometres, it forms part of the greater Tsavo Conservation Area together with Tsavo East National Park.
+
+At Mosmak Tours & Travel, we introduce you to Tsavo West as a destination of contrasts — where lush springs meet lava fields, and wildlife thrives against a backdrop of ancient geological formations.
+
+<h2>Wildlife Diversity and Iconic Species</h2>
+
+Tsavo West is home to a remarkable variety of animals. Visitors can encounter Africa’s iconic Big Five — lion, leopard, elephant, buffalo, and rhino — alongside cheetahs, giraffes, zebras, hippos, crocodiles, and numerous antelope species.
+
+The park’s elephants, often dusted red from the region’s rich soil, are a memorable sight as they roam through open plains and woodland. Tsavo West also supports important conservation populations, including the rare hirola antelope and protected black rhinos within designated sanctuaries.
+
+<h2>Mzima Springs – A Natural Wonder<\h2>
+
+One of Tsavo West’s most celebrated attractions is Mzima Springs. These crystal-clear freshwater springs emerge from underground volcanic aquifers, forming pools teeming with hippos and fish. A specially designed viewing chamber allows visitors to observe underwater wildlife — a unique safari experience rarely found elsewhere in Africa.
+
+<h2>Volcanic Landscapes and Scenic Beauty</h2>
+
+Tsavo West’s terrain is shaped by ancient volcanic activity. Highlights include the dramatic Shetani Lava Flow and the striking Chaimu Crater, offering panoramic views for adventurous hikers.
+
+From open savannahs and acacia woodlands to rocky hills and riverine vegetation, the park’s varied landscapes create ever-changing safari scenery. Lake Jipe and other water bodies add to the ecological diversity and photographic appeal.
+
+<h2>Birdlife Paradise</h2>
+
+With over 600 recorded bird species, Tsavo West is a dream destination for bird enthusiasts. From raptors and kingfishers to rare regional species, the park’s habitats support an extraordinary avian population year-round.
+
+<h2>Conservation and Heritage</h2>
+
+Tsavo West also carries historical significance, including the story of the infamous “Man-Eaters of Tsavo” during the construction of the Kenya–Uganda railway in the late 19th century. Today, the park stands as a symbol of conservation and resilience, protecting both wildlife and heritage.
+
+<h2>Why Choose Mosmak for Your Tsavo West Safari?</h2>
+
+Experience diverse wildlife, including the Big Five
+
+Visit the iconic Mzima Springs for underwater hippo viewing
+
+Discover dramatic volcanic landscapes and lava flows
+
+Enjoy scenic game drives across varied ecosystems
+
+Spot rare and regionally unique bird species
+
+Combine cultural, historical, and wildlife experiences
+
+Stay in carefully selected lodges offering comfort in the wild
+
+<h2>Explore Tsavo West with Mosmak Tours & Travel</h2>
+
+Tsavo West National Park offers more than a safari — it offers exploration. From its volcanic formations to its life-giving springs, every corner reveals a different story of Kenya’s natural heritage.
+
+With Mosmak Tours & Travel, your Tsavo West safari becomes a carefully crafted adventure, blending wildlife, landscapes, and unforgettable moments in one of Kenya’s most captivating wilderness destinations.
+
+<br>
+<hr>
+<p>Want to know more? Talk to us below or via <a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information">Whatsapp</a></p>
+<hr>
+    </div>
+  </div>
+</div>
       <!-- Contact Form Section (Overlapping) -->
       <div class="container form-container-overlap" id="contact-form">
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
           <div class="col-lg-10">
             <div class="contact-form-wrapper">
-              <h2 class="text-center mb-4">Get in Touch</h2>
+              <h2 class="text-center mb-4">Book This Safari</h2>
 
 
               {% if success %}
@@ -308,25 +369,7 @@
   </main>
 
   <footer id="footer" class="footer position-relative dark-background">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-      <div class="container footer-top">
+    <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="{% url 'index' %}" class="d-flex align-items-center">
@@ -335,7 +378,7 @@
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
             <p>Kisumu</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254746708674</span></p>
             <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
           </div>
         </div>
@@ -343,24 +386,14 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations' %}">Destinations</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
           </ul>
         </div>
 
-        <!-- <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-          </ul>
-        </div> -->
-
-       <div class="col-lg-4 col-md-12">
+        <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>
           <p>Follow us for quick updates and offers</p>
           <div class="social-links d-flex">
@@ -377,7 +410,6 @@
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        
         Designed by <a href="https://aben.co.ke">Aben Technologies</a>
       </div>
     </div>
@@ -390,7 +422,8 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-   <!-- JS Files -->
+
+  <!-- Vendor JS Files -->
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'vendor/aos/aos.js'%}"></script>
   <script src="{% static 'vendor/purecounter/purecounter_vanilla.js'%} "></>
@@ -402,8 +435,7 @@
   <!-- Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+</script>
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information"

@@ -5,13 +5,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mosmak</title>
+  <title>Mosmak Tours &amp; Travel</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/mosmak.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -19,79 +19,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://bootstrapmade.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+ 
 </head>
 
 <body class="tour-details-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/mosmak.png " alt="Mosmak Logo">
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="tours.html">Tours</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="destination-details.html">Destination Details</a></li>
-              <li><a href="tour-details.html" class="active">Tour Details</a></li>
-              <li><a href="booking.html">Booking</a></li>
-              <li><a href="testimonials">Testimonials</a></li>
-              <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
-              <li><a href="terms.html">Terms</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="404.html">404</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          {% comment %} <a href="{% url 'destinations' %}" class="active dropdown "><span>Destinations</span> {% endcomment %}
+          <li class="dropdown">
+  <a href="{% url 'destinations' %}">
+    <span>Destinations</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+    <li><a href="{% url 'kenya' %}">Kenya</a></li>
+    <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
+    <li><a href="{% url 'general' %}">General Tours</a></li>
+  </ul>
+</li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="destiantios.html">Get Started</a>
+      <a class="btn-getstarted" href="{% url 'contact' %}">Book a Trip</a>
 
     </div>
   </header>
@@ -551,13 +526,10 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        
+        Designed by <a href="https://aben.co.ke/">Aben Technologies</a>
       </div>
     </div>
 
@@ -569,19 +541,25 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+ <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js'%} "></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%} "></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js '%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/254746708674?text=Hello%20I%20would%20like%20more%20information"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
 </body>
 
 </html>

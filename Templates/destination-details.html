@@ -50,7 +50,17 @@
         <ul>
           <li><a href="{% url 'index' %}" >Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'destinations' %}">Destinations</a></li>
+          <li class="dropdown">
+  <a href="{% url 'destinations' %}">
+    <span>Destinations</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+   <li><a href="{% url 'kenya' %}">Kenya</a></li>
+    <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
+    <li><a href="{% url 'general' %}">General Tours</a></li>
+  </ul>
+</li>
           <li><a href="{% url 'gallery' %}">Gallery</a></li>
           
           <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -423,7 +433,7 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="gallery-item">
-          <img src="{% static 'images/img/travel/maasai-mara-safari.jpg' %}" alt="Maasai Mara Safari" class="img-fluid">
+          <img src="{% static 'images/img/travel/maasai-mara-1.jpg' %}" alt="Maasai Mara Safari" class="img-fluid">
         </div>
       </div>
       <div class="swiper-slide">
@@ -537,7 +547,7 @@
 </script>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/254746708674?text=Hello%20I%20would%20like%20more%20information"
+<a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat on WhatsApp">

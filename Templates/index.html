@@ -49,7 +49,17 @@
         <ul>
           <li><a href="{% url 'index' %}" class="active">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'destinations' %}">Destinations</a></li>
+          <li class="dropdown">
+  <a href="{% url 'destinations' %}">
+    <span>Destinations</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+    <li><a href="{% url 'kenya' %}">Kenya</a></li>
+    <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
+    <li><a href="{% url 'general' %}">General Tours</a></li>
+  </ul>
+</li>
           <li><a href="{% url 'gallery' %}">Gallery</a></li>
           
           <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -352,7 +362,7 @@
                   <span>Serengeti</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{%  url 'contact'%}" class="btn-book">Book Now</a>
+                  <a href="{%  url 'contact'%}.#contact-form" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -386,7 +396,7 @@
                   <span>Watamu</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -420,7 +430,7 @@
                   <span>Suguta</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact'  %}" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact'  %}.#contact-form" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -454,7 +464,7 @@
                   <span>Italy</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -488,7 +498,7 @@
                   <span>Aberdare</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -522,7 +532,7 @@
                   <span>Mt. Kenya</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">Book Now</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -808,7 +818,7 @@
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
             <p>Kisumu</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254746708674</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
             <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
           </div>
         </div>
