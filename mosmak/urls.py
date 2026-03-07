@@ -38,6 +38,10 @@ urlpatterns = [
     path('destination-details-aberdare', views.destinationaberdare, name='destination-details-aberdare' ),
     path('destination-details-hells-gate', views.destinationhellsgate, name='destination-details-hells-gate' ),
     path('destination-details-zanzibar', views.destinationzanzibar, name='destination-details-zanzibar' ),
+    path('destination-details-serengeti', views.destinationserengeti, name='destination-details-serengeti' ),
+    path('destination-details-kilimanjaro', views.destinationkilimanjaro, name='destination-details-kilimanjaro' ),
+    path('destination-details-ngorongoro', views.destinationngorongoro, name='destination-details-ngorongoro' ),
+    path('destination-details-lake-nakuru', views.destinationlakenakuru, name='destination-details-lake-nakuru' ),
     
     path('inquiries/', include('inquiries.urls'))
 ]

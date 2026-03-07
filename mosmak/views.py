@@ -49,3 +49,15 @@ def destinationhellsgate(request):
 
 def destinationzanzibar(request):
     return render(request, "destination-details-zanzibar.html")
+
+def destinationserengeti(request):
+    return render(request, "destination-details-serengeti.html")
+
+def destinationkilimanjaro(request):
+    return render(request, "destination-details-kilimanjaro.html")
+
+def destinationngorongoro(request):
+    return render(request, "destination-details-ngorongoro.html")
+
+def destinationlakenakuru(request):
+    return render(request, "destination-details-lake-nakuru.html")
