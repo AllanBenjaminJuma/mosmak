@@ -8527,6 +8527,16 @@ section,
   margin-top: 10px;
 }
 
+.footer-logo {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.15);
+}
+
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -8566,4 +8576,17 @@ section,
 
 .whatsapp-float {
     animation: pulse 2s infinite;
+}
+
+.social-links .social-item a {
+  display: flex;
+  align-items: center;   /* vertically align */
+  gap: 8px;              /* space between icon and text */
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.social-links i {
+  font-size: 18px;
 }

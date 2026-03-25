@@ -10,7 +10,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
   <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -39,7 +39,7 @@
       class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
@@ -74,7 +74,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/showcase-8.webp' %});">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/marine-park-mosmak.jpeg' %});">
       <div class="container position-relative">
         <h1>Destinations</h1>
         <p>Explore destinations that inspire and excite.</p>
@@ -114,7 +114,7 @@
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-coastal">
               <a href="{% url 'destination-details' %}" class="destination-tile">
                 <div class="tile-image">
-                  <img src="{% static 'images/img/travel/beach-sea-ocean-with-coconut-palm-tree-sunrise-time mosmak.jpg' %}" alt="Maldives" class="img-fluid" loading="lazy">
+                  <img src="{% static 'images/img/travel/marine-park-mosmak.jpeg' %}" alt="Mosmak" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag luxury">Elysian</span>
                     <div class="destination-info">
@@ -349,7 +349,7 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations' %}">Tours</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
           </ul>
         </div>
 

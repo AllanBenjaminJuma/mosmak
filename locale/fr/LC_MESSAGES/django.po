@@ -1,0 +1,294 @@
+#: .\Templates\index.html:312
+msgid "9 Expeditions"
+msgstr "9 expéditions"
+
+#: .\Templates\index.html:317 .\Templates\index.html:338
+msgid "View Details"
+msgstr "Voir les détails"
+
+#: .\Templates\index.html:326
+msgid "Limited Spots"
+msgstr "Places limitées"
+
+#: .\Templates\index.html:329
+msgid "Safari Experience"
+msgstr "Expérience safari"
+
+#: .\Templates\index.html:330
+msgid "Kenya"
+msgstr "Kenya"
+
+#: .\Templates\index.html:331
+msgid ""
+"Witness Kenya's wildlife up close—limited spots available, book your "
+"adventure!"
+msgstr ""
+"Observez la faune du Kenya de près — places limitées disponibles, réservez "
+"votre aventure !"
+
+#: .\Templates\index.html:333
+msgid "11 Safaris"
+msgstr "11 safaris"
+
+#: .\Templates\index.html:357 .\Templates\index.html:358
+msgid "Featured Tours"
+msgstr "Circuits en vedette"
+
+#: .\Templates\index.html:368
+msgid "Top Rated"
+msgstr "Les mieux notés"
+
+#: .\Templates\index.html:373
+msgid "Maasai Mara Migration"
+msgstr "Migration du Maasai Mara"
+
+#: .\Templates\index.html:375
+msgid "From 4 Days - Flexible"
+msgstr "À partir de 4 jours - Flexible"
+
+#: .\Templates\index.html:376
+msgid "Min 3 - Flexible"
+msgstr "Min 3 - Flexible"
+
+#: .\Templates\index.html:378
+msgid ""
+"Experience the magic of the Maasai Mara..."
+msgstr ""
+"Vivez la magie du Maasai Mara, où chaque lever de soleil réveille la nature. "
+"À partir de 4 jours d’aventure, plongez dans la grande migration, des "
+"paysages à couper le souffle et des rencontres inoubliables avec la faune "
+"africaine. Votre voyage commence ici — et peut aller aussi loin que votre "
+"esprit le souhaite."
+
+#: .\Templates\index.html:403
+msgid "Guest Favourite"
+msgstr "Favori des voyageurs"
+
+#: .\Templates\index.html:408
+msgid "Soft sands, warm waters and endless days"
+msgstr "Sables doux, eaux chaudes et journées infinies"
+
+#: .\Templates\index.html:410
+msgid "10 Days"
+msgstr "10 jours"
+
+#: .\Templates\index.html:411
+msgid "Max 8 - Flexible"
+msgstr "Max 8 - Flexible"
+
+#: .\Templates\index.html:413
+msgid ""
+"Lose yourself along a shore..."
+msgstr ""
+"Perdez-vous le long d’une côte où les palmiers se balancent, où les brises "
+"chaudes apaisent et où le temps suit le rythme des vagues. La détente pure "
+"rencontre la beauté tropicale — la retraite balnéaire parfaite."
+
+#: .\Templates\index.html:420
+msgid "Book Now"
+msgstr "Réserver maintenant"
+
+#: .\Templates\index.html:438
+msgid "Newly Added"
+msgstr "Nouveauté"
+
+#: .\Templates\index.html:443
+msgid "Desert Discovery"
+msgstr "Découverte du désert"
+
+#: .\Templates\index.html:445
+msgid "5 Days"
+msgstr "5 jours"
+
+#: .\Templates\index.html:446
+msgid "Max 10 - Flexible"
+msgstr "Max 10 - Flexible"
+
+#: .\Templates\index.html:448
+msgid ""
+"Escape to a world of golden sands..."
+msgstr ""
+"Évadez-vous dans un monde de sables dorés, d’horizons infinis et de sérénité "
+"absolue. Au cœur du désert, chaque moment devient une aventure — des couchers "
+"de soleil à couper le souffle au silence apaisant qui régénère l’âme."
+
+#: .\Templates\index.html:478
+msgid "Kenyan Coastal Cruise"
+msgstr "Croisière côtière kenyane"
+
+#: .\Templates\index.html:480
+msgid "9 Days - Flexible"
+msgstr "9 jours - Flexible"
+
+#: .\Templates\index.html:481
+msgid "Max 15 - Flexible"
+msgstr "Max 15 - Flexible"
+
+#: .\Templates\index.html:483
+msgid ""
+"Escape to Kenya's pristine coastline..."
+msgstr ""
+"Évadez-vous vers la côte immaculée du Kenya, où les eaux turquoise rencontrent "
+"les plages de sable blanc. Détendez-vous sous les palmiers et explorez la vie "
+"marine vibrante."
+
+#: .\Templates\index.html:508
+msgid "Eco-Friendly"
+msgstr "Écologique"
+
+#: .\Templates\index.html:513
+msgid "Peak Adventures, Light Footprints"
+msgstr "Aventures extrêmes, impact léger"
+
+#: .\Templates\index.html:515
+msgid "12 Days - Flexible"
+msgstr "12 jours - Flexible"
+
+#: .\Templates\index.html:518
+msgid ""
+"Discover the thrill of hiking..."
+msgstr ""
+"Découvrez le plaisir de la randonnée et de l’alpinisme tout en respectant la "
+"nature."
+
+#: .\Templates\index.html:520
+msgid "Mt. Kenya"
+msgstr "Mont Kenya"
+
+#: .\Templates\index.html:521
+msgid "Mt. Longonot"
+msgstr "Mont Longonot"
+
+#: .\Templates\index.html:522
+msgid "Aberdare"
+msgstr "Aberdare"
+
+#: .\Templates\index.html:543
+msgid "Adventure Seekers"
+msgstr "Amateurs d’aventure"
+
+#: .\Templates\index.html:548
+msgid "Wildwood Adventures"
+msgstr "Aventures en forêt"
+
+#: .\Templates\index.html:550
+msgid "14 Days"
+msgstr "14 jours"
+
+#: .\Templates\index.html:551
+msgid "Max 10"
+msgstr "Max 10"
+
+#: .\Templates\index.html:553
+msgid ""
+"Explore Kenya's forests..."
+msgstr ""
+"Explorez les forêts du Kenya à travers des aventures écologiques."
+
+#: .\Templates\index.html:585
+msgid "Testimonials"
+msgstr "Témoignages"
+
+#: .\Templates\index.html:586
+msgid "Hear from the People"
+msgstr "Écoutez les voyageurs"
+
+#: .\Templates\index.html:586
+msgid "Behind Mosmak"
+msgstr "Derrière Mosmak"
+
+#: .\Templates\index.html:628
+msgid "Ceo &amp; Founder"
+msgstr "PDG et fondateur"
+
+#: .\Templates\index.html:641
+msgid "Marketting &amp; Communications Director"
+msgstr "Directeur marketing et communication"
+
+#: .\Templates\index.html:656
+msgid "Tour Manager &amp; Trip Coordinator"
+msgstr "Responsable des circuits et coordinateur"
+
+#: .\Templates\index.html:670
+msgid "Chief Operations Officer (COO)"
+msgstr "Directeur des opérations (COO)"
+
+#: .\Templates\index.html:690
+msgid "Limited Time Offer"
+msgstr "Offre à durée limitée"
+
+#: .\Templates\index.html:692
+msgid "Discover Your Next Adventure"
+msgstr "Découvrez votre prochaine aventure"
+
+#: .\Templates\index.html:703
+msgid "View Deals"
+msgstr "Voir les offres"
+
+#: .\Templates\index.html:708
+msgid "Need help choosing?"
+msgstr "Besoin d’aide pour choisir ?"
+
+#: .\Templates\index.html:722
+msgid "Destinations"
+msgstr "Destinations"
+
+#: .\Templates\index.html:767
+msgid "Why Choose Our Adventures"
+msgstr "Pourquoi choisir nos aventures"
+
+#: .\Templates\index.html:768
+msgid "Experience the difference with our premium travel services"
+msgstr "Découvrez la différence avec nos services de voyage premium"
+
+#: .\Templates\index.html:780
+msgid "Handpicked Destinations"
+msgstr "Destinations sélectionnées"
+
+#: .\Templates\index.html:793
+msgid "Award-Winning Service"
+msgstr "Service primé"
+
+#: .\Templates\index.html:806
+msgid "Personalized Care"
+msgstr "Service personnalisé"
+
+#: .\Templates\index.html:856
+msgid "Useful Links"
+msgstr "Liens utiles"
+
+#: .\Templates\index.html:858
+msgid "Home"
+msgstr "Accueil"
+
+#: .\Templates\index.html:859
+msgid "About us"
+msgstr "À propos"
+
+#: .\Templates\index.html:860
+msgid "Tours"
+msgstr "Circuits"
+
+#: .\Templates\index.html:861
+msgid "Terms of service"
+msgstr "Conditions d’utilisation"
+
+#: .\Templates\index.html:866
+msgid "Follow Us"
+msgstr "Suivez-nous"
+
+#: .\Templates\index.html:867
+msgid "Follow us for quick updates and offers"
+msgstr "Suivez-nous pour des mises à jour rapides et des offres"
+
+#: .\Templates\index.html:882
+msgid "Copyright"
+msgstr "Droits d’auteur"
+
+#: .\Templates\index.html:882
+msgid "All Rights Reserved"
+msgstr "Tous droits réservés"
+
+#: .\Templates\index.html:884
+msgid "Designed by"
+msgstr "Conçu par"

@@ -11,7 +11,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
   <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -42,7 +42,7 @@
       <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
         {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
         
-        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
@@ -158,6 +158,45 @@
     <h2>Must-Visit Attractions</h2>
     <p>Experience the best of Kenya's iconic destinations</p>
   </div>
+  {% comment %} kenya and tanzania {% endcomment %}
+
+  <div class="row gy-4">
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+      <div class="attraction-item">
+        <div class="attraction-image">
+          <video class="img-fluid" autoplay muted loop playsinline>
+    <source src="{% static 'images/img/travel/leopard-mosmak.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+        </div>
+        <a href={% url 'kenya' %} class="attraction-link">
+
+          <div class="attraction-content">
+          <h4>Kenya Safaris</h4>
+          <p>Vast savannahs teeming with wildlife, offering unforgettable safari adventures and the Great Migration spectacle.</p>
+        </div>
+        </a>
+      </div>
+    </div>
+    {% comment %} end of Kenya {% endcomment %}
+    {% comment %} Start of Tanzania {% endcomment %}
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+      <div class="attraction-item">
+        <div class="attraction-image">
+          <img src="{% static 'images/img/travel/kilimanjaro-mosmak-tanzania.jpeg' %}" alt="Tanzania's Landscapes" class="img-fluid">
+        </div>
+        <a href={% url 'tanzania' %} class="attraction-link">
+        <div class="attraction-content">
+          <h4>Tanzania Safaris</h4>
+          <p>Explore Tanzania's diverse landscapes and witness the Great Migration of wildebeest and zebra.</p>
+        </div>
+        </a>
+      </div>
+      
+    </div>
+
+
+  {% comment %} end of kenya and tanaznia {% endcomment %}
   <div class="row gy-4">
     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
       <div class="attraction-item">
@@ -208,10 +247,12 @@
         <div class="attraction-image">
           <img src="{% static 'images/img/travel/lake-nakuru-mosmak.png' %}" alt="Lake Nakuru Mosmak" class="img-fluid">
         </div>
+        <a href="{% url 'kenya' %}" class="attraction-link">
         <div class="attraction-content">
           <h4>Lake Nakuru</h4>
           <p>Home to thousands of flamingos and diverse wildlife, a haven for bird watchers and nature enthusiasts.</p>
         </div>
+        </a>
       </div>
     </div>
     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
@@ -219,11 +260,13 @@
         <div class="attraction-image">
           <img src="{% static 'images/img/travel/tsavo mosmak.jpg' %}" alt="Tsavo National Park Mosmak" class="img-fluid">
         </div>
+        <a href="{% url 'kenya' %}" class="attraction-link">
         <div class="attraction-content">
           <h4>Tsavo National Park</h4>
           <p>Kenya's iconic wildlife reserve, where vast wilderness meets abundant elephants, lions, and other African wildlife.</p>
         </div>
-      </div>
+        </a>
+      </div> 
     </div>
   </div>
 </div>
@@ -485,9 +528,9 @@
             <span class="sitename">Mosmak</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>Kisumu</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254746708674</span></p>
+            <p>Nairobi road, Kinda Building</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
             <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
           </div>
         </div>
@@ -498,7 +541,7 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
           </ul>
         </div>
 

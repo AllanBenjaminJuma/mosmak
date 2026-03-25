@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
   <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -41,7 +42,7 @@
       <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
         {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
         
-        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
@@ -67,7 +68,20 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{% url 'contact' %}.#contact-form">Book a Trip</a>
+      <a class="btn-getstarted" href="{% url 'contact' %}.#contact-form">{% trans "Book a Trip" %}</a>
+
+      <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+
+        <select name="language" onchange="this.form.submit()">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="de">German</option>
+          <option value="es">Spanish</option>
+          <option value="it">Italian</option>
+        </select>
+        
+      </form>
 
     </div>
   </header>
@@ -89,10 +103,10 @@
           <div class="col-lg-7">
             <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
               <h1 class="hero-title">Mosmak Tours and Travel</h1>
-              <p class="hero-subtitle">Discover Your Perfect Journey</p>
+              <p class="hero-subtitle">{% trans "Discover Your Perfect Journey" %}</p>
               <div class="hero-buttons">
-                <a href="#why-choose-us" class="btn btn-primary me-3">Start Exploring</a>
-                <a href="{% url 'destinations' %}" class="btn btn-outline">Browse Tours</a>
+                <a href="#why-choose-us" class="btn btn-primary me-3">{% trans "Start Exploring" %}</a>
+                <a href="{% url 'destinations' %}" class="btn btn-outline">{% trans "Browse Tours" %}</a>
               </div>
             </div>
           </div>
@@ -108,31 +122,31 @@
         <div class="row align-items-center mb-5">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="content">
-              <h3>Explore the World with Confidence</h3>
-              <p>Discover breathtaking destinations, embrace unforgettable adventures, and travel with peace of mind. From expertly planned itineraries to local insights and seamless support, we make every journey smooth, safe, and extraordinary. Your next adventure starts here—let's make it unforgettable!</p>
+              <h3>{% trans "Explore the World with Confidence" %}</h3>
+              <p>{% trans "Discover breathtaking destinations, embrace unforgettable adventures, and travel with peace of mind. From expertly planned itineraries to local insights and seamless support, we make every journey smooth, safe, and extraordinary. Your next adventure starts here—let's make it unforgettable!" %}</p>
       
               <div class="stats-row">
                 <div class="stat-item">
                   <span data-purecounter-start="0" data-purecounter-end="1219" data-purecounter-duration="2" class="purecounter">0</span>
-                  <div class="stat-label">Happy Travelers</div>
+                  <div class="stat-label">{% trans "Happy Travelers" %}</div>
                 </div>
                 <div class="stat-item">
                   <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="2" class="purecounter">0</span>
-                  <div class="stat-label">Countries Covered</div>
+                  <div class="stat-label">{% trans "Countries Covered" %}</div>
                 </div>
                 <div class="stat-item">
                   <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="2" class="purecounter">0</span>
-                  <div class="stat-label">Years Experience</div>
+                  <div class="stat-label">{% trans "Years Experience" %}</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="about-image">
-              <img src="{% static 'images/img/travel/showcase-8.webp' %}" alt="Travel Experience" class="img-fluid rounded-4">
+              <img src="{% static 'images/img/travel/lion-mosmak.jpeg' %}" alt="Travel Experience" class="img-fluid rounded-4">
               <div class="experience-badge">
                 <div class="experience-number">10+</div>
-                <div class="experience-text">Years of Excellence</div>
+                <div class="experience-text">{% trans "Years of Excellence" %}</div>
               </div>
             </div>
           </div>
@@ -142,8 +156,8 @@
         <div  id="why-choose-us" class="why-choose-section">
           <div class="row justify-content-center">
             <div class="col-lg-8 text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3>Why Choose Us for Your Next Adventure</h3>
-              <p>We turn travel dreams into reality. With personalized itineraries, local expertise, and unmatched support, we ensure every journey is seamless, safe, and full of unforgettable moments. Choose us, and explore the world with confidence and ease.</p>
+              <h3>{% trans "Why Choose Us for Your Next Adventure" %}</h3>
+              <p>{% trans "We turn travel dreams into reality. With personalized itineraries, local expertise, and unmatched support, we ensure every journey is seamless, safe, and full of unforgettable moments. Choose us, and explore the world with confidence and ease." %}</p>
             </div>
           </div>
 
@@ -153,8 +167,8 @@
                 <div class="feature-icon">
                   <i class="bi bi-people-fill"></i>
                 </div>
-                <h4>Local Experts</h4>
-                <p>Experience the hidden gems and authentic spots with guides who know the destinations best.</p>
+                <h4>{% trans "Local Experts" %}</h4>
+                <p>{% trans "Experience the hidden gems and authentic spots with guides who know the destinations best." %}</p>
               </div>
             </div>
 
@@ -163,8 +177,8 @@
                 <div class="feature-icon">
                   <i class="bi bi-shield-check"></i>
                 </div>
-                <h4>Safe &amp; Secure</h4>
-                <p>Travel with peace of mind—your safety is our top priority.</p>
+                <h4>{% trans "Safe & Secure" %}</h4>
+                <p>{% trans "Travel with peace of mind—your safety is our top priority." %}</p>
               </div>
             </div>
 
@@ -173,8 +187,8 @@
                 <div class="feature-icon">
                   <i class="bi bi-cash"></i>
                 </div>
-                <h4>Best Prices</h4>
-                <p>Get the most value for your adventure without compromising quality.</p>
+                <h4>{% trans "Best Prices" %}</h4>
+                <p>{% trans "Get the most value for your adventure without compromising quality." %}</p>
               </div>
             </div>
 
@@ -183,8 +197,8 @@
                 <div class="feature-icon">
                   <i class="bi bi-headset"></i>
                 </div>
-                <h4>24/7 Support</h4>
-                <p>We're here anytime, anywhere, to make your journey smooth and worry-free.</p>
+                <h4>{% trans "24/7 Support" %}</h4>
+                <p>{% trans "We're here anytime, anywhere, to make your journey smooth and worry-free." %}</p>
               </div>
             </div>
 
@@ -193,8 +207,8 @@
                 <div class="feature-icon">
                   <i class="bi bi-geo-alt-fill"></i>
                 </div>
-                <h4>Global Destinations</h4>
-                <p>Explore the world's most stunning places, from hidden gems to iconic landmarks.</p>
+                <h4>{% trans "Global Destinations" %}</h4>
+                <p>{% trans "Explore the world's most stunning places, from hidden gems to iconic landmarks." %}</p>
               </div>
             </div>
 
@@ -203,8 +217,8 @@
                 <div class="feature-icon">
                   <i class="bi bi-star-fill"></i>
                 </div>
-                <h4>Premium Experience</h4>
-                <p>Enjoy top-notch service, comfort, and unforgettable adventures tailored just for you.</p>
+                <h4>{% trans "Premium Experience" %}</h4>
+                <p>{% trans "Enjoy top-notch service, comfort, and unforgettable adventures tailored just for you." %}</p>
               </div>
             </div>
           </div><!-- End Features Grid -->
@@ -219,8 +233,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Destinations</h2>
-        <div><span>Check Our</span> <span class="description-title">Featured Destinations</span></div>
+        <h2>{% trans "Featured Destinations" %}</h2>
+        <div><span>{% trans "Check Our" %}</span> <span class="description-title">{% trans "Featured Destinations" %}</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -232,10 +246,10 @@
               <div class="destination-overlay">
                 <img src="{% static 'images/img/travel/elephants.png' %}" alt="Wilderbeast Mosmak" class="img-fluid">
                 <div class="destination-info">
-                  <span class="destination-tag">Popular Choice</span>
-                  <h3>Elephant Paradise</h3>
-                  <p class="location"><i class="bi bi-geo-alt-fill"></i> Tsavo</p>
-                  <p class="description">Vast landscapes, roaming elephants, and unforgettable wildlife encounters await in the heart of Tsavo. Experience nature up close and create memories that will last a lifetime.</p>
+                  <span class="destination-tag">{% trans "Popular Choice" %}</span>
+                  <h3>{% trans "Elephant Paradise" %}</h3>
+                  <p class="location"><i class="bi bi-geo-alt-fill"></i> {% trans "Tsavo" %}</p>
+                  <p class="description">{% trans "Vast landscapes, roaming elephants, and unforgettable wildlife encounters await in the heart of Tsavo. Experience nature up close and create memories that will last a lifetime." %}</p>
                   <div class="destination-meta">
                     <div class="tours-count">
                       <i class="bi bi-collection"></i>
@@ -251,7 +265,7 @@
                     <span class="amount">$2,150</span> {% endcomment %}
                   </div>
                   <a href="{% url 'destination-details' %}" class="explore-btn">
-                    <span>Explore Now</span>
+                    <span>{% trans "Explore Now" %}</span>
                     <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
@@ -266,12 +280,12 @@
                 <div class="compact-destination">
                   <div class="destination-image">
                     <img src="{% static 'images/img/travel/lion.jpg' %}" alt="Masai Mara Mosmak" class="img-fluid">
-                    <div class="badge-offer">Best Value</div>
+                    <div class="badge-offer">{% trans "Best Value" %}</div>
                   </div>
                   <div class="destination-details">
                     <h4>The Mara Adventure</h4>
                     <p class="location"><i class="bi bi-geo-alt"></i> Maasai Mara</p>
-                    <p class="brief">Endless savannahs, the Great Migration, and majestic wildlife encounters create an unforgettable journey in the heart of the Maasai Mara.</p>
+                    <p class="brief">{% trans "Endless savannahs, the Great Migration, and majestic wildlife encounters create an unforgettable journey in the heart of the Maasai Mara." %}</p>
                     <div class="stats-row">
                       <span class="tour-count"><i class="bi bi-calendar-check"></i> 16 Tours</span>
                       <span class="rating"><i class="bi bi-star-fill"></i> 4.8</span>
@@ -288,15 +302,15 @@
                     <img src="{% static 'images/img/travel/culture-guide.jpg' %}" alt="Cultural Heritage Mosmak" class="img-fluid">
                   </div>
                   <div class="destination-details">
-                    <h4>Cultural Heritage</h4>
-                    <p class="location"><i class="bi bi-geo-alt"></i> Mara, Mombasa & Malindi</p>
-                    <p class="brief">Discover vibrant traditions, rich local customs, and the living history that shapes every community..</p>
+                    <h4>{% trans "Cultural Heritage" %}</h4>
+                    <p class="location"><i class="bi bi-geo-alt"></i> {% trans "Mara, Mombasa & Malindi" %}</p>
+                    <p class="brief">{% trans "Discover vibrant traditions, rich local customs, and the living history that shapes every community." %}</p>
                     <div class="stats-row">
-                      <span class="tour-count"><i class="bi bi-calendar-check"></i> 9 Expeditions</span>
+                      <span class="tour-count"><i class="bi bi-calendar-check"></i> {% trans "9 Expeditions" %}</span>
                       <span class="rating"><i class="bi bi-star-fill"></i> 4.7</span>
                       {% comment %} <span class="price">from $980</span> {% endcomment %}
                     </div>
-                    <a href="{% url 'destination-details' %}" class="quick-link">View Details <i class="bi bi-chevron-right"></i></a>
+                    <a href="{% url 'destination-details' %}" class="quick-link">{% trans "View Details" %} <i class="bi bi-chevron-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -305,18 +319,18 @@
                 <div class="compact-destination">
                   <div class="destination-image">
                     <img src="{% static 'images/img/gallery/crossroad-car-safari- mosmak.jpg' %}" alt="Safari Experience" class="img-fluid">
-                    <div class="badge-offer limited">Limited Spots</div>
+                    <div class="badge-offer limited">{% trans "Limited Spots" %}</div>
                   </div>
                   <div class="destination-details">
-                    <h4>Safari Experience</h4>
-                    <p class="location"><i class="bi bi-geo-alt"></i> Kenya</p>
-                    <p class="brief">Witness Kenya's wildlife up close—limited spots available, book your adventure!</p>
+                    <h4>{% trans "Safari Experience" %}</h4>
+                    <p class="location"><i class="bi bi-geo-alt"></i> {% trans "Kenya" %}</p>
+                    <p class="brief">{% trans "Witness Kenya's wildlife up close—limited spots available, book your adventure!" %}</p>
                     <div class="stats-row">
-                      <span class="tour-count"><i class="bi bi-calendar-check"></i> 11 Safaris</span>
+                      <span class="tour-count"><i class="bi bi-calendar-check"></i> {% trans "11 Safaris" %}</span>
                       <span class="rating"><i class="bi bi-star-fill"></i> 4.9</span>
                       {% comment %} <span class="price">from $2,750</span> {% endcomment %}
                     </div>
-                    <a href="{% url 'destination-details' %}" class="quick-link">View Details <i class="bi bi-chevron-right"></i></a>
+                    <a href="{% url 'destination-details' %}" class="quick-link">{% trans "View Details" %} <i class="bi bi-chevron-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -335,8 +349,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Tours</h2>
-        <div><span>Check Our</span> <span class="description-title">Featured Tours</span></div>
+        <h2>{% trans "Featured Tours" %}</h2>
+        <div><span>{% trans "Check Our" %}</span> <span class="description-title">{% trans "Featured Tours" %}</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -346,23 +360,23 @@
             <div class="tour-card">
               <div class="tour-image">
                 <img src="{% static 'images/img/travel/lion.jpg' %}" alt="Lion Mara Retreat Mosmak" class="img-fluid" loading="lazy">
-                <div class="tour-badge">Top Rated</div>
+                <div class="tour-badge">{% trans "Top Rated" %}</div>
                 {% comment %} <div class="tour-price">$2,150</div> {% endcomment %}
               </div>
               <div class="tour-content">
-                <h4>Maasai Mara Migration</h4>
+                <h4>{% trans "Maasai Mara Migration" %}</h4>
                 <div class="tour-meta">
-                  <span class="duration"><i class="bi bi-clock"></i> From 4 Days - Flexible </span>
-                  <span class="group-size"><i class="bi bi-people"></i> Min 3 - Flexible</span>
+                  <span class="duration"><i class="bi bi-clock"></i> {% trans "From 4 Days - Flexible" %} </span>
+                  <span class="group-size"><i class="bi bi-people"></i> {% trans "Min 3 - Flexible" %}</span>
                 </div>
-                <p>Experience the magic of the Maasai Mara, where every sunrise awakens the wild. From 4 days of adventure, immerse yourself in the Great Migration, breathtaking landscapes, and unforgettable encounters with Africa's most iconic wildlife. Your journey begins here — and can go as far as your spirit desires.</p>
+                <p>{% trans "Experience the magic of the Maasai Mara, where every sunrise awakens the wild. From 4 days of adventure, immerse yourself in the Great Migration, breathtaking landscapes, and unforgettable encounters with Africa's most iconic wildlife. Your journey begins here — and can go as far as your spirit desires." %}</p>
                 <div class="tour-highlights">
                   <span>Narok</span>
                   <span>Mara</span>
                   <span>Serengeti</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{%  url 'contact'%}.#contact-form" class="btn-book">Book Now</a>
+                  <a href="{%  url 'contact'%}.#contact-form" class="btn-book">{% trans "Book Now" %}</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -380,23 +394,23 @@
             <div class="tour-card">
               <div class="tour-image">
                 <img src="{% static 'images/img/travel/umbrella-chair-beach mosmak.jpg' %}" alt="Arctic Expedition" class="img-fluid" loading="lazy">
-                <div class="tour-badge limited">Guest Favourite</div>
+                <div class="tour-badge limited">{% trans "Guest Favourite" %}</div>
                 {% comment %} <div class="tour-price">$5,700</div> {% endcomment %}
               </div>
               <div class="tour-content">
-                <h4>Soft sands, warm waters and endless days</h4>
+                <h4>{% trans "Soft sands, warm waters and endless days" %}</h4>
                 <div class="tour-meta">
-                  <span class="duration"><i class="bi bi-clock"></i> 10 Days</span>
-                  <span class="group-size"><i class="bi bi-people"></i> Max 8 - Flexible</span>
+                  <span class="duration"><i class="bi bi-clock"></i> {% trans "10 Days" %}</span>
+                  <span class="group-size"><i class="bi bi-people"></i> {% trans "Max 8 - Flexible" %}</span>
                 </div>
-                <p>Lose yourself along a shore where palm trees sway, warm breezes soothe, and time moves at the rhythm of the waves. Pure relaxation meets tropical beauty — the perfect beach retreat.</p>
+                <p>{% trans "Lose yourself along a shore where palm trees sway, warm breezes soothe, and time moves at the rhythm of the waves. Pure relaxation meets tropical beauty — the perfect beach retreat." %}</p>
                 <div class="tour-highlights">
                   <span>Mombasa</span>
                   <span>Diani</span>
                   <span>Watamu</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">{% trans "Book Now" %}</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -414,30 +428,30 @@
             <div class="tour-card">
               <div class="tour-image">
                 <img src="{% static 'images/img/travel/desert-sunset mosmak.jpg' %}" alt="Desert Safari Mosmak" class="img-fluid" loading="lazy">
-                <div class="tour-badge new">Newly Added</div>
+                <div class="tour-badge new">{% trans "Newly Added" %}</div>
                 {% comment %} <div class="tour-price">$1,400</div> {% endcomment %}
               </div>
               <div class="tour-content">
-                <h4>Desert Discovery</h4>
+                <h4>{% trans "Desert Discovery" %}</h4>
                 <div class="tour-meta">
-                  <span class="duration"><i class="bi bi-clock"></i> 5 Days</span>
-                  <span class="group-size"><i class="bi bi-people"></i> Max 10 - Flexible</span>
+                  <span class="duration"><i class="bi bi-clock"></i> {% trans "5 Days" %}</span>
+                  <span class="group-size"><i class="bi bi-people"></i> {% trans "Max 10 - Flexible" %}</span>
                 </div>
-                <p>Escape to a world of golden sands, endless horizons, and pure serenity. In the heart of the desert, every moment becomes an adventure — from breathtaking sunsets to peaceful silence that refreshes the soul. Discover a rare blend of beauty, freedom, and unforgettable experiences that will leave you inspired long after your journey ends. Your perfect desert getaway begins here.</p>
+                <p>{% trans "Escape to a world of golden sands, endless horizons, and pure serenity. In the heart of the desert, every moment becomes an adventure — from breathtaking sunsets to peaceful silence that refreshes the soul. Discover a rare blend of beauty, freedom, and unforgettable experiences that will leave you inspired long after your journey ends. Your perfect desert getaway begins here." %}</p>
                 <div class="tour-highlights">
                   <span>Chalbi</span>
                   <span>Nyiri</span>
                   <span>Suguta</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact'  %}.#contact-form" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact'  %}.#contact-form" class="btn-book">{% trans "Book Now" %}</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
-                    <span>4.9 (72)</span>
+                    <span>{% trans "4.9 (72)" %}</span>
                   </div>
                 </div>
               </div>
@@ -448,30 +462,30 @@
             <div class="tour-card">
               <div class="tour-image">
                 <img src="{% static 'images/img/travel/kenyan coast mosmak tours.jpg' %}" alt="Coastal Explorer Mosmak" class="img-fluid" loading="lazy">
-                <div class="tour-badge">Popular Choice</div>
+                <div class="tour-badge">{% trans "Popular Choice" %}</div>
                 {% comment %} <div class="tour-price">$1,980</div> {% endcomment %}
               </div>
               <div class="tour-content">
-                <h4>Kenyan Coastal Cruise</h4>
+                <h4>{% trans "Kenyan Coastal Cruise" %}</h4>
                 <div class="tour-meta">
-                  <span class="duration"><i class="bi bi-clock"></i> 9 Days - Flexible</span>
-                  <span class="group-size"><i class="bi bi-people"></i> Max 15 - Flexible</span>
+                  <span class="duration"><i class="bi bi-clock"></i> {% trans "9 Days - Flexible" %}</span>
+                  <span class="group-size"><i class="bi bi-people"></i> {% trans "Max 15 - Flexible" %}</span>
                 </div>
-                <p>Escape to Kenya's pristine coastline, where turquoise waters meet soft white sands. Relax under swaying palms, explore vibrant marine life, and let the sun and sea create unforgettable memories — your perfect beach getaway awaits</p>
+                <p>{% trans "Escape to Kenya's pristine coastline, where turquoise waters meet soft white sands. Relax under swaying palms, explore vibrant marine life, and let the sun and sea create unforgettable memories — your perfect beach getaway awaits" %}</p>
                 <div class="tour-highlights">
-                  <span>Greece</span>
-                  <span>Croatia</span>
-                  <span>Italy</span>
+                  <span>Mombasa</span>
+                  <span>Malindi</span>
+                  <span>Lamu</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">{% trans "Book Now" %}</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-half"></i>
-                    <span>4.7 (110)</span>
+                    <span>{% trans "4.7 (110)" %}</span>
                   </div>
                 </div>
               </div>
@@ -482,30 +496,30 @@
             <div class="tour-card">
               <div class="tour-image">
                 <img src="{% static 'images/img/travel/mt-kenya mosmak.jpg' %}" alt="Rainforest Trek" class="img-fluid" loading="lazy">
-                <div class="tour-badge cultural">Eco-Friendly</div>
+                <div class="tour-badge cultural">{% trans "Eco-Friendly" %}</div>
                 {% comment %} <div class="tour-price">$2,650</div> {% endcomment %}
               </div>
               <div class="tour-content">
-                <h4>Peak Adventures, Light Footprints</h4>
+                <h4>{% trans "Peak Adventures, Light Footprints" %}</h4>
                 <div class="tour-meta">
-                  <span class="duration"><i class="bi bi-clock"></i> 12 Days - Flexible</span>
-                  <span class="group-size"><i class="bi bi-people"></i> Max 10 - Flexible</span>
+                  <span class="duration"><i class="bi bi-clock"></i> {% trans "12 Days - Flexible" %}</span>
+                  <span class="group-size"><i class="bi bi-people"></i> {% trans "Max 10 - Flexible" %}</span>
                 </div>
-                <p>Discover the thrill of hiking and mountain climbing while treading lightly on nature. Explore breathtaking trails and peaks through eco-friendly adventures that leave only footprints and create unforgettable memories.</p>
+                <p>{% trans "Discover the thrill of hiking and mountain climbing while treading lightly on nature. Explore breathtaking trails and peaks through eco-friendly adventures that leave only footprints and create unforgettable memories." %}</p>
                 <div class="tour-highlights">
-                  <span>Mt. Kenya</span>
-                  <span>Mt. Longonot</span>
-                  <span>Aberdare</span>
+                  <span>{% trans "Mt. Kenya" %}</span>
+                  <span>{% trans "Mt. Longonot" %}</span>
+                  <span>{% trans "Aberdare" %}</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">{% trans "Book Now" %}</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star"></i>
-                    <span>4.5 (88)</span>
+                    <span>{% trans "4.5 (88)" %}</span>
                   </div>
                 </div>
               </div>
@@ -516,30 +530,30 @@
             <div class="tour-card">
               <div class="tour-image">
                 <img src="{% static 'images/img/travel/high-angle-shot-waterfalls-forest mosmak.jpg' %}" alt="Waterfalls Mosmak" class="img-fluid" loading="lazy">
-                <div class="tour-badge adventure">Adventure Seekers</div>
+                <div class="tour-badge adventure">{% trans "Adventure Seekers" %}</div>
                 {% comment %} <div class="tour-price">$3,950</div> {% endcomment %}
               </div>
               <div class="tour-content">
-                <h4>Wildwood Adventures</h4>
+                <h4>{% trans "Wildwood Adventures" %}</h4>
                 <div class="tour-meta">
-                  <span class="duration"><i class="bi bi-clock"></i> 14 Days</span>
-                  <span class="group-size"><i class="bi bi-people"></i> Max 10</span>
+                  <span class="duration"><i class="bi bi-clock"></i>{% trans "14 Days" %}</span>
+                  <span class="group-size"><i class="bi bi-people"></i> {% trans "Max 10" %}</span>
                 </div>
-                <p>Explore Kenya's forests on eco-friendly adventures — hike trails, discover waterfalls, and meet wildlife, all while leaving nothing but footprints and taking unforgettable memories.</p>
+                <p>{% trans "Explore Kenya's forests on eco-friendly adventures — hike trails, discover waterfalls, and meet wildlife, all while leaving nothing but footprints and taking unforgettable memories." %}</p>
                 <div class="tour-highlights">
                   <span>Aberdare</span>
                   <span>Ngong</span>
                   <span>Mt. Kenya</span>
                 </div>
                 <div class="tour-action">
-                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">Book Now</a>
+                  <a href="{% url 'contact' %}.#contact-form" class="btn-book">{% trans "Book Now" %}</a>
                   <div class="tour-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
-                    <span>4.9 (60)</span>
+                    <span>{% trans "4.9 (60)" %}</span>
                   </div>
                 </div>
               </div>
@@ -557,8 +571,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <div><span>Hear from the People</span> <span class="description-title">Behind Mosmak</span></div>
+        <h2>{% trans "Testimonials" %}</h2>
+        <div><span>{% trans "Hear from the People" %}</span> <span class="description-title">{% trans "Behind Mosmak" %}</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -595,12 +609,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>At Mosmak Tours and Travel, we are passionate about creating memorable journeys across Kenya and Africa. Our focus is on delivering authentic experiences that connect travelers with nature, culture, and adventure, all while promoting eco-friendly and responsible tourism.</span>
+                  <span>{% trans "At Mosmak Tours and Travel, we are passionate about creating memorable journeys across Kenya and Africa. Our focus is on delivering authentic experiences that connect travelers with nature, culture, and adventure, all while promoting eco-friendly and responsible tourism." %}</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="{% static 'images/img/person/' %}" class="testimonial-img" alt="">
                 <h3>Moses Mutemi</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <h4>{% trans "Ceo &amp; Founder" %}</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -608,12 +622,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>We showcase the beauty and culture of Kenya, inspiring travelers to explore responsibly and create memories that last a lifetime.</span>
+                  <span>{% trans "We showcase the beauty and culture of Kenya, inspiring travelers to explore responsibly and create memories that last a lifetime." %}</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="{% static 'images/img/person/' %}" class="testimonial-img" alt="">
                 <h3>Sandra Mutemi</h3>
-                <h4>Marketting &amp; Communications Director</h4>
+                <h4>{% trans "Marketting &amp; Communications Director" %}</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -621,14 +635,14 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>I make sure every tour is seamless, safe, and full of authentic experiences that leave our travelers with unforgettable memories.</span>
+                  <span>{% trans "I make sure every tour is seamless, safe, and full of authentic experiences that leave our travelers with unforgettable memories." %}</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img 
                 src="{% static 'images/img/person/' %}" 
                 class="testimonial-img" alt="">
                 <h3>Julius Mutuku</h3>
-                <h4>Tour Manager &amp; Trip Coordinator</h4>
+                <h4>{% trans "Tour Manager &amp; Trip Coordinator" %}</h4>
               </div>
             </div>
             <!-- End testimonial item -->
@@ -637,12 +651,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>I ensure every journey runs smoothly, from planning to travel, so our clients enjoy seamless, safe, and unforgettable adventures.</span>
+                  <span>{% trans "I ensure every journey runs smoothly, from planning to travel, so our clients enjoy seamless, safe, and unforgettable adventures." %}</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="{% static 'images/img/person/' %}" class="testimonial-img" alt="">
                 <h3>Martin Serek</h3>
-                <h4>Chief Operations Officer (COO)</h4>
+                <h4>{% trans "Chief Operations Officer (COO)" %}</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -662,10 +676,10 @@
         <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
           <div class="content-wrapper">
             <div class="badge-wrapper">
-              <span class="promo-badge">Limited Time Offer</span>
+              <span class="promo-badge">{% trans "Limited Time Offer" %}</span>
             </div>
-            <h2>Discover Your Next Adventure</h2>
-            <p>Unlock incredible destinations with our specially curated travel packages. From exotic beaches to mountain peaks, your perfect getaway awaits.</p>
+            <h2>{% trans "Discover Your Next Adventure" %}</h2>
+            <p>{% trans "Unlock incredible destinations with our specially curated travel packages. From exotic beaches to mountain peaks, your perfect getaway awaits." %}</p>
 
             <div class="action-section">
               <div class="main-actions">
@@ -675,15 +689,15 @@
                 </a>
                 <a href="{% url 'destinations' %}" class="btn btn-deals">
                   <i class="bi bi-percent"></i>
-                  View Deals
+                  {% trans "View Deals" %}
                 </a>
               </div>
 
               <div class="quick-contact">
-                <span class="contact-label">Need help choosing?</span>
-                <a href="tel:+254746708674" class="contact-link">
+                <span class="contact-label">{% trans "Need help choosing?" %}</span>
+                <a href="tel:+254701800394" class="contact-link">
                   <i class="bi bi-telephone"></i>
-                  Call +254746708674
+                  Call +254701800394
                 </a>
               </div>
             </div>
@@ -693,12 +707,12 @@
             <img src="{% static 'images/img/travel/showcase-3.webp' %}" alt="Travel Adventure Mosmak Tours and Travels" class="hero-image" loading="lazy">
             <div class="image-overlay">
               <div class="stat-item">
-                <span class="stat-number">500+</span>
-                <span class="stat-label">Destinations</span>
+                <span class="stat-number">{% trans "500+" %}</span>
+                <span class="stat-label">{% trans "Destinations" %}</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">10K+</span>
-                <span class="stat-label">Happy Travelers</span>
+                <span class="stat-number">{% trans "10K+" %}</span>
+                <span class="stat-label">{% trans "Happy Travelers" %}</span>
               </div>
             </div>
           </div>
@@ -738,8 +752,8 @@
 
         <div class="benefits-showcase" data-aos="fade-up" data-aos-delay="400">
           <div class="benefits-header">
-            <h3>Why Choose Our Adventures</h3>
-            <p>Experience the difference with our premium travel services</p>
+            <h3>{% trans "Why Choose Our Adventures" %}</h3>
+            <p>{% trans "Experience the difference with our premium travel services" %}</p>
           </div>
 
           <div class="benefits-grid">
@@ -751,8 +765,8 @@
                 <div class="benefit-pattern"></div>
               </div>
               <div class="benefit-content">
-                <h4>Handpicked Destinations</h4>
-                <p>Every location is carefully selected by our travel experts for authentic experiences</p>
+                <h4>{% trans "Handpicked Destinations" %}</h4>
+                <p>{% trans "Every location is carefully selected by our travel experts for authentic experiences" %}</p>
               </div>
             </div>
 
@@ -764,8 +778,8 @@
                 <div class="benefit-pattern"></div>
               </div>
               <div class="benefit-content">
-                <h4>Award-Winning Service</h4>
-                <p>Recognized for excellence with 5-star ratings and industry awards</p>
+                <h4>{% trans "Award-Winning Service" %}</h4>
+                <p>{% trans "Recognized for excellence with 5-star ratings and industry awards" %}</p>
               </div>
             </div>
 
@@ -777,8 +791,8 @@
                 <div class="benefit-pattern"></div>
               </div>
               <div class="benefit-content">
-                <h4>Personalized Care</h4>
-                <p>Tailored itineraries designed around your preferences and travel style</p>
+                <h4>{% trans "Personalized Care" %}</h4>
+                <p>{% trans "Tailored itineraries designed around your preferences and travel style" %}</p>
               </div>
             </div>
           </div>
@@ -810,37 +824,41 @@
     </div> {% endcomment %}
 
     <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="{% url 'index' %}" class="d-flex align-items-center">
-            <span class="sitename">Mosmak</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>Kisumu</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
-            <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
-          </div>
-        </div>
+  <div class="row gy-4">
+    <div class="col-lg-4 col-md-6 footer-about">
+      <a href="{% url 'index' %}" class="d-flex align-items-center">
+  <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo" height="50" class="me-2">
+  <span class="sitename">Mosmak</span>
+</a>
+
+      <div class="footer-contact pt-3">
+        <p>Nairobi {% trans "road," %} Kinda {% trans "Building" %}</p>
+        <p>Nairobi, Kenya</p>
+        <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
+        <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
+      </div>
+    </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4>{% trans "Useful Links" %}</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">{% trans "Home" %}</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">{% trans "About us" %}</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">{% trans "Tours" %}</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">{% trans "Terms of service" %}</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Follow us for quick updates and offers</p>
+          <h4>{% trans "Follow Us" %}</h4>
+          <p>{% trans "Follow us for quick updates and offers" %}</p>
           <div class="social-links d-flex">
+            
             <a href="x.com"><i class="bi bi-twitter-x"></i></a>
             <a href="facebook.com"><i class="bi bi-facebook"></i></a>
             <a href="instagram.com"><i class="bi bi-instagram"></i></a>
             <a href="tiktok.com"><i class="bi bi-tiktok"></i></a>
+            
           </div>
         </div>
 
@@ -848,9 +866,9 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>{% trans "Copyright" %}</span> <strong class="px-1 sitename">Mosmak</strong> <span>{% trans "All Rights Reserved" %}</span></p>
       <div class="credits">
-        Designed by <a href="https://aben.co.ke">Aben Technologies</a>
+        {% trans "Designed by" %} <a href="https://aben.co.ke">Aben Technologies</a>
       </div>
     </div>
 
@@ -875,7 +893,7 @@
   <script src="{% static 'js/main.js' %}"></script>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/254746708674?text=Hello%20I%20would%20like%20more%20information"
+<a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat on WhatsApp">

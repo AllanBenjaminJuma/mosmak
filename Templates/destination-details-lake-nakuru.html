@@ -11,7 +11,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
   <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -42,7 +42,7 @@
       <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
         {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
         
-        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
@@ -76,15 +76,15 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/showcase-8.webp' %});">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/Lake_Nakuru_National_Park_mosmak.jpg' %});">
       <div class="container position-relative">
         <h1>Destination Details</h1>
         <p>Discover unforgettable destinations where nature, culture, and adventure come together to create experiences that inspire, excite, and stay with you long after the journey ends.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url 'destinations' %}">Destinations</a></li>
-            <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
-            <li class="current">Zanzibar</li>
+            <li><a href="{% url 'kenya' %}">Kenya</a></li>
+            <li class="current">Lake Nakuru</li>
           </ol>
         </nav>
       </div>
@@ -99,12 +99,12 @@
         <div class="destination-hero" data-aos="fade-up" data-aos-delay="100">
   <div class="hero-slider">
     <div class="slides active">
-      <img src="{% static 'images/img/travel/eye-level-shot-two-giant-horned-african-buffalos-standing-dirty-unpaved-road-mosmak.jpg' %}" alt="Buffalos Mosmak">
+      <img src="{% static 'images/img/travel/Lake_Nakuru_National_Park_mosmak.jpg' %}" alt="Flamingos Mosmak">
 
       <!-- Overlay Content -->
     <div class="hero-overlay">
       <div class="hero-content">
-        <h1>The Mara Buffalos</h1>
+        <h1>Flamingo Nation</h1>
         <p class="hero-tagline">Feel the raw power of the wild as towering buffalo herds dominate the endless plains</p>
       </div>
     </div>
@@ -153,7 +153,7 @@
 
 
 
-Discover Lake Nakuru National Park with Mosmak Tours & Travel
+Discover Lake Nakuru National Park with Mosmak Tours &amp; Travel
 
 Located in Kenya’s breathtaking Great Rift Valley, approximately 160 km northwest of Nairobi, Lake Nakuru National Park is one of Kenya’s most spectacular wildlife destinations. Covering about 188 square kilometers, the park may be smaller than other national parks in Kenya, but it offers an extraordinary diversity of wildlife, birdlife, and stunning landscapes that make it a must-visit safari destination.
 
@@ -366,7 +366,7 @@ With Mosmak Tours & Travel, your journey to Lake Nakuru becomes more than just a
 
 <div class="col-md-6">
   <div class="form-group">
-    <label class="form-label fw-semibold">How many days will you be in Kenya?</label>
+    <label class="form-label fw-semibold">How many days are you staying?</label>
     <div class="input-with-icon">
       <i class="bi bi-clock-history"></i>
       <input type="number" class="form-control" name="days_in_kenya" min="1" placeholder="e.g. 5" required>
@@ -419,9 +419,9 @@ With Mosmak Tours & Travel, your journey to Lake Nakuru becomes more than just a
             <span class="sitename">Mosmak</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>Kisumu</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254746708674</span></p>
+            <p>Nairobi road,Kinda Building</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
             <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
           </div>
         </div>
@@ -432,7 +432,7 @@ With Mosmak Tours & Travel, your journey to Lake Nakuru becomes more than just a
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
           </ul>
         </div>
 

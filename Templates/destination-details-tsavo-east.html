@@ -11,7 +11,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
   <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -42,7 +42,7 @@
       <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
         {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
         
-        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
@@ -318,15 +318,13 @@ With Mosmak Tours & Travel, your journey into Tsavo East becomes more than a vis
 
 <div class="col-md-6">
   <div class="form-group">
-    <label class="form-label fw-semibold">How many days will you be in Kenya?</label>
+    <label class="form-label fw-semibold">How many days are you staying?</label>
     <div class="input-with-icon">
       <i class="bi bi-clock-history"></i>
       <input type="number" class="form-control" name="days_in_kenya" min="1" placeholder="e.g. 5" required>
     </div>
   </div>
 </div>
-
-
 
                   {% comment %} the message {% endcomment %}
                   <div class="col-12">
@@ -371,9 +369,9 @@ With Mosmak Tours & Travel, your journey into Tsavo East becomes more than a vis
             <span class="sitename">Mosmak</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>Kisumu</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254746708674</span></p>
+            <p>Nairobi road, Kinda Building</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
             <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
           </div>
         </div>
@@ -384,7 +382,7 @@ With Mosmak Tours & Travel, your journey into Tsavo East becomes more than a vis
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
           </ul>
         </div>
 

@@ -18,9 +18,20 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
+from django.conf.urls.i18n import i18n_patterns # for multi-language support
+
+
+urlpatterns =[
     
+    path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')), # for multi-language support and language swithching
+    
+]
+
+# Translate URL patterns for multi-language support
+
+urlpatterns += i18n_patterns(
+        
     path('', views.index, name='index' ),
     path('about', views.about, name='about' ),
     path('destinations', views.destinations, name='destinations' ),
@@ -43,5 +54,10 @@ urlpatterns = [
     path('destination-details-ngorongoro', views.destinationngorongoro, name='destination-details-ngorongoro' ),
     path('destination-details-lake-nakuru', views.destinationlakenakuru, name='destination-details-lake-nakuru' ),
     
-    path('inquiries/', include('inquiries.urls'))
-]
+    path('inquiries/', include('inquiries.urls')),
+    
+    prefix_default_language=False
+    
+)
+
+

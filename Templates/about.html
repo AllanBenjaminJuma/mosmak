@@ -11,7 +11,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
   <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -40,7 +40,7 @@
       class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
@@ -75,7 +75,7 @@
 
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade"
-      style="background-image: url({% static 'images/img/travel/showcase-8.webp' %});">
+      style="background-image: url({% static 'images/img/travel/elephant-buffalo-mosmak-kenya.jpg' %});">
       <div class="container position-relative">
         <h1>About</h1>
         <p>Unforgettable Adventures with a commitment to safety, comfort, and eco-friendly travel.</p>
@@ -106,7 +106,7 @@
         <div class="row align-items-center mb-5">
           <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="300">
             <div class="hero-image">
-              <img src="{% static 'images/img/travel/beach-sea-ocean-with-coconut-palm-tree-sunrise-time mosmak.jpg' %}" class="img-fluid" alt="Travel Adventure Mosmak">
+              <img src="{% static 'images/img/travel/beach-sea-ocean-with-coconut-palm-tree-sunrise-time mosmak.webp' %}" class="img-fluid" alt="Travel Adventure Mosmak">
               <div class="floating-stats">
                 <div class="stat-item">
                   <span class="number">5+</span>
@@ -343,9 +343,9 @@ We are also committed to protecting your personal information and ensuring trans
             <span class="sitename">Mosmak</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>Kisumu</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254746708674</span></p>
+            <p>Nairobi road,Kinda Building</p>
+            <p>Nairobi</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>++254701800394</span></p>
             <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
           </div>
         </div>
@@ -356,7 +356,7 @@ We are also committed to protecting your personal information and ensuring trans
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations' %}">Tours</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
           </ul>
         </div>
 

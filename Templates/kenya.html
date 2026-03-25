@@ -10,7 +10,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'images/img/mosmak.png' %}" rel="icon">
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
   <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -40,7 +40,7 @@
       <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
         {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
         
-        <img src="{% static 'images/img/mosmak.png' %}" alt="Mosmak Logo">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
         <h1 class="sitename">Mosmak</h1>
       </a>
 
@@ -140,7 +140,7 @@ Experience the Big Five, stunning savannah sunsets, and authentic Maasai culture
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-coastal">
               <a href="{% url 'destination-details-lake-nakuru' %}" class="destination-tile">
                 <div class="tile-image">
-                  <img src="{% static 'images/img/travel/beach-sea-ocean-with-coconut-palm-tree-sunrise-time mosmak.jpg' %}" alt="Maldives" class="img-fluid" loading="lazy">
+                  <img src="{% static 'images/img/travel/marine-park-mosmak.jpeg' %}" alt="Marine Park, Mosmak" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag luxury">Elysian</span>
                     <div class="destination-info">
@@ -161,7 +161,7 @@ Experience the Big Five, stunning savannah sunsets, and authentic Maasai culture
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-tropical">
               <a href="{% url 'destination-details-tsavo-west' %}" class="destination-tile">
                 <div class="tile-image">
-                  <img src="{% static 'images/img/travel/tsavo mosmak.jpg' %}" alt="Thailand" class="img-fluid" loading="lazy">
+                  <img src="{% static 'images/img/travel/tsavo mosmak.jpg' %}" alt="Tsavo East Mosmak" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag popular">Vibrant</span>
                     <div class="destination-info">
@@ -182,7 +182,7 @@ Experience the Big Five, stunning savannah sunsets, and authentic Maasai culture
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-tropical">
               <a href="{% url 'destination-details-tsavo-east' %}" class="destination-tile">
                 <div class="tile-image">
-                  <img src="{% static 'images/img/travel/Red-Elephants-at-Tsavo-East-National-Park-mosmak.jpg' %}" alt="Thailand" class="img-fluid" loading="lazy">
+                  <img src="{% static 'images/img/travel/Red-Elephants-at-Tsavo-East-National-Park-mosmak.jpg' %}" alt="Tsavo East Mosmak" class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag popular">Vibrant</span>
                     <div class="destination-info">
@@ -319,7 +319,7 @@ Experience the Big Five, stunning savannah sunsets, and authentic Maasai culture
             <div class="col-lg-4 col-md-6 destination-item isotope-item filter-tropical">
               <a href="{% url 'destination-details' %}" class="destination-tile">
                 <div class="tile-image">
-                  <img src="{% static 'images/img/travel/tsavo mosmak.jpg' %}" alt="Thailand" class="img-fluid" loading="lazy">
+                  <img src="{% static 'images/img/travel/tsavo mosmak.jpg' %}" alt="Tsavo Mosmak  " class="img-fluid" loading="lazy">
                   <div class="overlay-content">
                     <span class="destination-tag popular">Vibrant</span>
                     <div class="destination-info">
@@ -592,111 +592,7 @@ After breakfast, drive back to Nairobi with unforgettable safari memories.
               </div>
             </div>
           </div>
-        </div>
-
-        
-        
-        <!-- Booking Form -->
-        <div class="booking-section" id="booking" data-aos="fade-up" data-aos-delay="600">
-          <div class="booking-card">
-            <h2>Book This Tour</h2>
-            <form action="forms/tour-booking.php" method="post" class="php-email-form">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="travel-date">Preferred Travel Date</label>
-                    <select name="date" id="travel-date" class="form-control" required="">
-                      <option value="">Select a date</option>
-                      <option value="May 15-26">May 15-26, 2024</option>
-                      <option value="June 12-23">June 12-23, 2024</option>
-                      <option value="July 10-21">July 10-21, 2024</option>
-                      <option value="August 14-25">August 14-25, 2024</option>
-                      <option value="September 18-29">September 18-29, 2024</option>
-                      <option value="October 9-20">October 9-20, 2024</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="travelers">Number of Travelers</label>
-                    <select name="travelers" id="travelers" class="form-control" required="">
-                      <option value="">Select travelers</option>
-                      <option value="1">1 Traveler</option>
-                      <option value="2">2 Travelers</option>
-                      <option value="3">3 Travelers</option>
-                      <option value="4">4 Travelers</option>
-                      <option value="5">5 Travelers</option>
-                      <option value="6+">6+ Travelers</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" name="name" id="name" class="form-control" required="">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" name="email" id="email" class="form-control" required="">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="message">Special Requests or Questions</label>
-                <textarea name="message" id="message" rows="4" class="form-control" placeholder="Any dietary restrictions, accessibility needs, or special occasions..."></textarea>
-              </div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your booking request has been sent. We'll contact you within 24 hours!</div>
-              <button type="submit" class="btn-submit">Send Booking Request</button>
-            </form>
-          </div>
-        </div>
-
-        <!-- Gallery -->
-        <div class="tour-gallery" data-aos="fade-up" data-aos-delay="700">
-          <h2>Photo Gallery</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <a href="assets/img/travel/destination-1.webp" class="glightbox">
-                <img src="assets/img/travel/destination-1.webp" alt="Venice Canals" class="img-fluid" loading="lazy">
-              </a>
-            </div>
-            <div class="gallery-item">
-              <a href="assets/img/travel/destination-2.webp" class="glightbox">
-                <img src="assets/img/travel/destination-2.webp" alt="Florence Cathedral" class="img-fluid" loading="lazy">
-              </a>
-            </div>
-            <div class="gallery-item">
-              <a href="assets/img/travel/destination-3.webp" class="glightbox">
-                <img src="assets/img/travel/destination-3.webp" alt="Roman Colosseum" class="img-fluid" loading="lazy">
-              </a>
-            </div>
-            <div class="gallery-item">
-              <a href="assets/img/travel/destination-4.webp" class="glightbox">
-                <img src="assets/img/travel/destination-4.webp" alt="Santorini Sunset" class="img-fluid" loading="lazy">
-              </a>
-            </div>
-            <div class="gallery-item">
-              <a href="assets/img/travel/destination-5.webp" class="glightbox">
-                <img src="assets/img/travel/destination-5.webp" alt="Hagia Sophia" class="img-fluid" loading="lazy">
-              </a>
-            </div>
-            <div class="gallery-item">
-              <a href="assets/img/travel/destination-6.webp" class="glightbox">
-                <img src="assets/img/travel/destination-6.webp" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
-              </a>
-            </div>
-          </div>
-        </div>
+        </div>           
 
         <!-- Final CTA -->
         <div class="final-cta" data-aos="fade-up" data-aos-delay="1000">
