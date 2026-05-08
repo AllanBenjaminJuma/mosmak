@@ -1,0 +1,446 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mosmak Tours &amp; Travel</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
+  <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+ 
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
+        
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
+        <h1 class="sitename">Mosmak</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li class="dropdown">
+  <a href="{% url 'destinations' %}">
+    <span>Destinations</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+   <li><a href="{% url 'kenya' %}">Kenya</a></li>
+    <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
+    <li><a href="{% url 'general' %}">General Tours</a></li>
+  </ul>
+</li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{% url 'contact' %}.#contact-form">Book a Trip</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/showcase-8.webp' %});">
+      <div class="container position-relative">
+        <h1>Destination Details</h1>
+        <p>Discover unforgettable destinations where nature, culture, and adventure come together to create experiences that inspire, excite, and stay with you long after the journey ends.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'destinations' %}">Destinations</a></li>
+            <li><a href="{% url 'kenya' %}">Kenya</a></li>
+            <li class="current">Hell's Gate</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Travel Destination Details Section -->
+    <section id="travel-destination-details" class="travel-destination-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Hero Section -->
+        <div class="destination-hero" data-aos="fade-up" data-aos-delay="100">
+  <div class="hero-slider">
+    <div class="slides active">
+      <img src="{% static 'images/img/travel/eye-level-shot-two-giant-horned-african-buffalos-standing-dirty-unpaved-road-mosmak.jpg' %}" alt="Buffalos Mosmak">
+
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>The Mara Buffalos</h1>
+        <p class="hero-tagline">Feel the raw power of the wild as towering buffalo herds dominate the endless plains</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/closeup-shot-silver-car-approaching-giraffe-safari-mosmak.jpg' %}" alt="Giraffe mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Giraffe</h1>
+        <p class="hero-tagline">With each stride, giraffes bring charm and majesty to the savannah.</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/horizontal-shot-some-zebras-pasturing-grassland-clear-sky-mosmak.jpg' %}" alt="Zebras Mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Tsavo Zebras</h1>
+        <p class="hero-tagline">Watch zebras roam freely across Tsavo's endless plains, a timeless sight of Kenya's wild beauty.</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/antelope mosmak.jpg' %}" alt="Antelope Mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>The Kenyan Antelope</h1>
+        <p class="hero-tagline">Agile and graceful, antelopes roam Kenya's plains in a ballet of speed and elegance.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+      <!--The Hell's Gate Overview Section -->
+<div class="destination-overview" data-aos="fade-up" data-aos-delay="200">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      
+<h1 style="color: #de980e;">Hell's Gate National Park</h1>
+<hr>
+<br>
+
+Located in Kenya’s spectacular Great Rift Valley, approximately 90 kilometers northwest of Nairobi, Hell’s Gate National Park is one of the country’s most distinctive and adventurous destinations. Covering about 68 square kilometers, the park is renowned for its dramatic scenery, geothermal activity, and rare opportunity to explore on foot or by bicycle.
+
+At Mosmak Tours & Travel, we present Hell’s Gate as the perfect blend of adventure, geology, wildlife, and culture — ideal for day trips, weekend escapes, or active safari experiences.
+
+<h2>Spectacular Rift Valley Landscapes</h2>
+
+Hell’s Gate is defined by towering cliffs, dramatic gorges, volcanic rock towers, and sweeping plains. Shaped by volcanic activity and erosion over millions of years, the park’s terrain offers breathtaking scenery at every turn.
+
+The iconic Hell’s Gate Gorge is a highlight, with narrow passageways and striking rock formations that create an unforgettable hiking experience.
+
+<h2>Explore on Foot or by Bicycle</h2>
+
+Unlike most national parks in Kenya, Hell’s Gate allows visitors to walk or cycle through designated areas. This makes it a favorite destination for hikers, cyclists, and outdoor enthusiasts seeking a closer connection with nature.
+
+Riding a bicycle alongside zebras and giraffes in open grasslands is a uniquely thrilling experience that sets Hell’s Gate apart from traditional safari parks.
+
+<h2>Geothermal Wonders</h2>
+
+The park is one of the few places in Kenya where visitors can witness active geothermal features. Natural hot springs and steam vents are visible reminders of the earth’s volcanic forces beneath the surface.
+
+A notable landmark is Fischer’s Tower, a striking volcanic plug that stands tall against the landscape and is popular with rock climbers and photographers.
+
+<h2>Diverse Wildlife Encounters</h2>
+
+Although smaller than many national parks, Hell’s Gate supports a variety of wildlife. Visitors commonly spot zebras, giraffes, buffaloes, elands, gazelles, hyraxes, and various primates.
+
+The park also contributes to the conservation of vulnerable species such as Rüppell’s vulture and Chanler’s mountain reedbuck, highlighting its ecological importance within the Rift Valley ecosystem.
+
+<h2>Birdwatching Opportunities</h2>
+
+With over 100 recorded bird species, Hell’s Gate offers rewarding birdwatching experiences. Raptors glide along the cliffs, while colorful birds inhabit the grasslands and acacia trees.
+
+<h2>Cultural Experiences</h2>
+
+Communities of the Maasai people live around the park, and visitors can engage in cultural visits to learn about traditional customs, pastoral lifestyles, and local heritage. At Mosmak, we ensure cultural interactions are respectful, authentic, and community-supportive.
+
+<h2>Accessible Adventure from Nairobi</h2>
+
+Due to its close proximity to Nairobi, Hell’s Gate National Park is one of the most accessible wildlife destinations in Kenya. It is ideal for day excursions, team-building trips, family outings, and travelers seeking an active safari alternative.
+
+Hell’s Gate National Park offers something different — a hands-on wilderness adventure set against a dramatic geological backdrop. From hiking through gorges to cycling alongside wildlife, every moment feels immersive and exhilarating.
+
+With Mosmak Tours & Travel, your journey to Hell’s Gate becomes more than a visit — it becomes an unforgettable Rift Valley adventure shaped by nature, exploration, and discovery.
+
+<hr>
+<p>Want to know more? Talk to us below or via <a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information">Whatsapp</a></p>
+<hr>
+    </div>
+  </div>
+</div>
+      <!-- Contact Form Section (Overlapping) -->
+      <div class="container form-container-overlap" id="contact-form">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-10">
+            <div class="contact-form-wrapper">
+              <h2 class="text-center mb-4">Book This Safari</h2>
+
+
+              {% if success %}
+              <div class="alert alert-success text-center mb-4">
+                Your message has been submitted successfully.  
+                Our team will get back to you shortly.
+              </div>
+              {% endif %}
+              
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success text-center mb-4">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+
+              <form action="{% url 'inquiries' %}" method="post" class="email-form">  
+              {% csrf_token %}
+              {% comment %} firstname section {% endcomment %}
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-person"></i>
+                        <input type="text" class="form-control" name="name" placeholder="Fullname" required="true">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {% comment %} email section {% endcomment %}
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="true">
+                      </div>
+                    </div>
+                  </div>
+
+                  {% comment %} Phone number section {% endcomment %}
+                  <div class="col-md-6">
+  <div class="form-group">
+  <label class="form-label fw-semibold">
+    Phone Number
+    <small class="text-muted">(Include country code, e.g. +254)</small>
+  </label>
+
+  <div class="input-group">
+    <span class="input-group-text">+</span>
+    <input
+      type="tel"
+      name="phone"
+      class="form-control"
+      placeholder="254712345678"
+      pattern="^\d{9,15}$"
+      inputmode="numeric"
+      required="true"
+    ></div>
+
+  </div>
+</div>
+
+                  {% comment %} the email subject {% endcomment %}
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-text-left"></i>
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                      </div>
+                    </div>
+                  </div>
+{% comment %} the date of arrival in Kenya {% endcomment %}
+              <div class="col-md-6">
+  <div class="form-group">
+    <label class="form-label fw-semibold">When are you arriving?</label>
+    <div class="input-with-icon">
+      <i class="bi bi-calendar-event"></i>
+      <input type="date" class="form-control" name="arrival_date" required min="{% now 'Y-m-d' %}">
+    </div>
+  </div>
+</div>
+
+{% comment %} Number of adults {% endcomment %}
+<div class="col-md-3">
+  <div class="form-group">
+    <label class="form-label fw-semibold">Adults</label>
+    <div class="input-with-icon">
+      <i class="bi bi-person"></i>
+      <input type="number" class="form-control" name="adults" min="1" value="1" required>
+    </div>
+  </div>
+</div>
+
+
+{% comment %} Number of children {% endcomment %}
+<div class="col-md-3">
+  <div class="form-group">
+    <label class="form-label fw-semibold">Children (0-5 years)</label>
+    <div class="input-with-icon">
+      <i class="bi bi-people"></i>
+      <input type="number" class="form-control" name="children" min="0" value="0">
+    </div>
+  </div>
+</div>
+
+{% comment %} comments days in Kenya {% endcomment %}
+
+<div class="col-md-6">
+  <div class="form-group">
+    <label class="form-label fw-semibold">How many days are you staying?</label>
+    <div class="input-with-icon">
+      <i class="bi bi-clock-history"></i>
+      <input type="number" class="form-control" name="days_in_kenya" min="1" placeholder="e.g. 5" required>
+    </div>
+  </div>
+</div>
+
+
+
+                  {% comment %} the message {% endcomment %}
+                  <div class="col-12">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-chat-dots message-icon"></i>
+                        <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    {% comment %} <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div> {% endcomment %}
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
+                  </div>
+                </div>
+                <div style="display:none;">
+  <input type="text" name="company" tabindex="-1" autocomplete="off">
+</div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="{% url 'index' %}" class="d-flex align-items-center">
+            <span class="sitename">Mosmak</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Nairobi road, Kinda Building</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
+            <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Follow us for quick updates and offers</p>
+          <div class="social-links d-flex">
+            <a href="x.com"><i class="bi bi-twitter-x"></i></a>
+            <a href="facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="tiktok.com"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://aben.co.ke">Aben Technologies</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js'%} "></>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%} "></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js '%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+</body>
+
+</html>

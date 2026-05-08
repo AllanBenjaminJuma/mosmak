@@ -1,0 +1,493 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mosmak Tours &amp; Travel</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
+  <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+ 
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index'  %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        {% comment %} <a href="{% url 'home' %}">Home</a> {% endcomment %}
+        
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
+        <h1 class="sitename">Mosmak</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li class="dropdown">
+  <a href="{% url 'destinations' %}">
+    <span>Destinations</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+   <li><a href="{% url 'kenya' %}">Kenya</a></li>
+    <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
+    <li><a href="{% url 'general' %}">General Tours</a></li>
+  </ul>
+</li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{% url 'contact' %}.#contact-form">Book a Trip</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/Lake_Nakuru_National_Park_mosmak.jpg' %});">
+      <div class="container position-relative">
+        <h1>Destination Details</h1>
+        <p>Discover unforgettable destinations where nature, culture, and adventure come together to create experiences that inspire, excite, and stay with you long after the journey ends.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'destinations' %}">Destinations</a></li>
+            <li><a href="{% url 'kenya' %}">Kenya</a></li>
+            <li class="current">Lake Nakuru</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Travel Destination Details Section -->
+    <section id="travel-destination-details" class="travel-destination-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Hero Section -->
+        <div class="destination-hero" data-aos="fade-up" data-aos-delay="100">
+  <div class="hero-slider">
+    <div class="slides active">
+      <img src="{% static 'images/img/travel/Lake_Nakuru_National_Park_mosmak.jpg' %}" alt="Flamingos Mosmak">
+
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Flamingo Nation</h1>
+        <p class="hero-tagline">Feel the raw power of the wild as towering buffalo herds dominate the endless plains</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/closeup-shot-silver-car-approaching-giraffe-safari-mosmak.jpg' %}" alt="Giraffe mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Giraffe</h1>
+        <p class="hero-tagline">With each stride, giraffes bring charm and majesty to the savannah.</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/horizontal-shot-some-zebras-pasturing-grassland-clear-sky-mosmak.jpg' %}" alt="Zebras Mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Tsavo Zebras</h1>
+        <p class="hero-tagline">Watch zebras roam freely across Tsavo's endless plains, a timeless sight of Kenya's wild beauty.</p>
+      </div>
+    </div>
+    </div>
+    <div class="slides">
+      <img src="{% static 'images/img/travel/antelope mosmak.jpg' %}" alt="Antelope Mosmak">
+      <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>The Kenyan Antelope</h1>
+        <p class="hero-tagline">Agile and graceful, antelopes roam Kenya's plains in a ballet of speed and elegance.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+      <!--Zanzibar National Park Overview Section -->
+<div class="destination-overview" data-aos="fade-up" data-aos-delay="200">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+<h2 style="color: #de980e;">Lake Nakuru National Park</h2>
+<hr>
+
+
+
+
+Discover Lake Nakuru National Park with Mosmak Tours &amp; Travel
+
+Located in Kenya’s breathtaking Great Rift Valley, approximately 160 km northwest of Nairobi, Lake Nakuru National Park is one of Kenya’s most spectacular wildlife destinations. Covering about 188 square kilometers, the park may be smaller than other national parks in Kenya, but it offers an extraordinary diversity of wildlife, birdlife, and stunning landscapes that make it a must-visit safari destination.
+
+At the heart of the park lies Lake Nakuru, a shallow soda lake famous for its remarkable birdlife and scenic beauty. The lake’s changing water levels create ideal conditions for wildlife and migratory birds, making it a vibrant ecosystem that attracts nature lovers from around the world.
+
+<h2>Birdwatching Paradise</h2>
+Lake Nakuru is globally known for its breathtaking gatherings of flamingos that often line the lake’s shores, turning the water’s edge into a sea of pink. Alongside flamingos, visitors can also spot pelicans and more than 400 recorded bird species, including waterfowl, raptors, and migratory birds.
+
+This makes the park one of the best birdwatching destinations in Africa and a paradise for photographers seeking unforgettable wildlife moments.
+
+<h2>Wildlife Diversity</h2>
+
+Lake Nakuru National Park hosts a thriving population of wildlife across its diverse habitats. Visitors on a Mosmak safari can encounter:
+
+Rothschild’s giraffes
+
+Buffaloes
+
+Zebras
+
+Warthogs
+
+Baboons
+
+Antelopes such as impalas, waterbucks, and elands
+
+The park is also a renowned sanctuary for both black and white rhinos, making it one of the best places in Kenya to observe these endangered species in their natural habitat.
+
+Predators such as lions, leopards, hyenas, and occasional cheetahs roam the park, maintaining the delicate balance of the ecosystem.
+
+<h2>Scenic Landscapes</h2>
+
+Lake Nakuru offers a variety of landscapes that create stunning scenery for visitors and photographers. The park features:
+
+Shimmering soda lake waters
+
+Marshlands and mud flats
+
+Acacia woodlands
+
+Open grasslands
+
+Rocky cliffs and viewpoints
+
+One of the most famous viewpoints is Baboon Cliff, where visitors can enjoy panoramic views of the lake and watch playful baboons against the backdrop of the Rift Valley.
+
+<h2>Conservation Efforts</h2>
+
+Lake Nakuru National Park plays a vital role in wildlife conservation in Kenya, particularly in protecting endangered rhino populations. Park rangers and conservationists work tirelessly to preserve the park’s biodiversity and ensure the survival of its unique ecosystems.
+
+Tourism helps support these conservation efforts while promoting responsible wildlife protection.
+
+<h2>Best Time to Visit</h2>
+Lake Nakuru National Park offers excellent wildlife viewing throughout the year.
+
+Dry Season (July – March): Best for wildlife sightings as animals gather around water sources.
+
+Rainy Season: Lush landscapes and large numbers of flamingos and migratory birds create spectacular scenery.
+
+<h2>Why Choose Mosmak Tours & Travel for Your Lake Nakuru Safari?</h2>
+
+Flamingo-filled lake shores creating breathtaking pink landscapes
+
+Exceptional birdwatching with over 400 species recorded
+
+Rare encounters with both black and white rhinos
+
+Diverse wildlife including giraffes, buffaloes, zebras, and antelopes
+
+Predator sightings such as lions, leopards, and hyenas
+
+Stunning viewpoints including Baboon Cliff
+
+Beautiful Rift Valley landscapes and photographic opportunities
+
+Easy access from Nairobi for day trips or overnight safaris
+
+Incredible sunsets over the lake
+
+Educational experiences on rhino conservation
+
+<h2>Experience Lake Nakuru with Mosmak Tours & Travel</h2>
+
+Mosmak Tours & Travel offers expertly guided safaris to Lake Nakuru National Park, allowing travelers to explore the park’s remarkable wildlife, birdlife, and scenic landscapes in comfort and safety. Our tailored safari experiences ensure every visitor enjoys the very best of Kenya’s natural beauty.
+
+Lake Nakuru National Park is a true jewel of Kenya’s wildlife heritage. From the mesmerizing flamingo displays to thriving rhino populations and breathtaking Rift Valley landscapes, the park offers a safari experience that is both inspiring and unforgettable.
+
+With Mosmak Tours & Travel, your journey to Lake Nakuru becomes more than just a safari—it becomes a meaningful adventure into one of Africa’s most beautiful and diverse natural sanctuaries.
+<br>
+<hr>
+<p>Want to know more? Talk to us below or via <a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information">Whatsapp</a></p>
+<hr>
+    </div>
+  </div>
+</div>
+      <!-- Contact Form Section (Overlapping) -->
+      <div class="container form-container-overlap" id="contact-form">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-10">
+            <div class="contact-form-wrapper">
+              <h2 class="text-center mb-4">Book This Safari</h2>
+
+
+              {% if success %}
+              <div class="alert alert-success text-center mb-4">
+                Your message has been submitted successfully.  
+                Our team will get back to you shortly.
+              </div>
+              {% endif %}
+              
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success text-center mb-4">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+
+              <form action="{% url 'inquiries' %}" method="post" class="email-form">  
+              {% csrf_token %}
+              {% comment %} firstname section {% endcomment %}
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-person"></i>
+                        <input type="text" class="form-control" name="name" placeholder="Fullname" required="true">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {% comment %} email section {% endcomment %}
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="true">
+                      </div>
+                    </div>
+                  </div>
+
+                  {% comment %} Phone number section {% endcomment %}
+                  <div class="col-md-6">
+  <div class="form-group">
+  <label class="form-label fw-semibold">
+    Phone Number
+    <small class="text-muted">(Include country code, e.g. +254)</small>
+  </label>
+
+  <div class="input-group">
+    <span class="input-group-text">+</span>
+    <input
+      type="tel"
+      name="phone"
+      class="form-control"
+      placeholder="254712345678"
+      pattern="^\d{9,15}$"
+      inputmode="numeric"
+      required="true"
+    ></div>
+
+  </div>
+</div>
+
+                  {% comment %} the email subject {% endcomment %}
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-text-left"></i>
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                      </div>
+                    </div>
+                  </div>
+{% comment %} the date of arrival in Kenya {% endcomment %}
+              <div class="col-md-6">
+  <div class="form-group">
+    <label class="form-label fw-semibold">When are you arriving?</label>
+    <div class="input-with-icon">
+      <i class="bi bi-calendar-event"></i>
+      <input type="date" class="form-control" name="arrival_date" required min="{% now 'Y-m-d' %}">
+    </div>
+  </div>
+</div>
+
+{% comment %} Number of adults {% endcomment %}
+<div class="col-md-3">
+  <div class="form-group">
+    <label class="form-label fw-semibold">Adults</label>
+    <div class="input-with-icon">
+      <i class="bi bi-person"></i>
+      <input type="number" class="form-control" name="adults" min="1" value="1" required>
+    </div>
+  </div>
+</div>
+
+
+{% comment %} Number of children {% endcomment %}
+<div class="col-md-3">
+  <div class="form-group">
+    <label class="form-label fw-semibold">Children (0-5 years)</label>
+    <div class="input-with-icon">
+      <i class="bi bi-people"></i>
+      <input type="number" class="form-control" name="children" min="0" value="0">
+    </div>
+  </div>
+</div>
+
+{% comment %} comments days in Kenya {% endcomment %}
+
+<div class="col-md-6">
+  <div class="form-group">
+    <label class="form-label fw-semibold">How many days are you staying?</label>
+    <div class="input-with-icon">
+      <i class="bi bi-clock-history"></i>
+      <input type="number" class="form-control" name="days_in_kenya" min="1" placeholder="e.g. 5" required>
+    </div>
+  </div>
+</div>
+
+
+
+                  {% comment %} the message {% endcomment %}
+                  <div class="col-12">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-chat-dots message-icon"></i>
+                        <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    {% comment %} <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div> {% endcomment %}
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
+                  </div>
+                </div>
+                <div style="display:none;">
+  <input type="text" name="company" tabindex="-1" autocomplete="off">
+</div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="{% url 'index' %}" class="d-flex align-items-center">
+            <span class="sitename">Mosmak</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Nairobi road,Kinda Building</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
+            <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Follow us for quick updates and offers</p>
+          <div class="social-links d-flex">
+            <a href="x.com"><i class="bi bi-twitter-x"></i></a>
+            <a href="facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="tiktok.com"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://aben.co.ke">Aben Technologies</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js'%} "></>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%} "></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js '%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+</body>
+
+</html>

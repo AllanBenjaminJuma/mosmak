@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mosmak Tours &amp; Travel</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
+  <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+ 
+</head>
+
+<body class="privacy-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
+        <h1 class="sitename">Mosmak</h1>
+      </a>
+
+       <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          {% comment %} <a href="{% url 'destinations' %}" class="active dropdown "><span>Destinations</span> {% endcomment %}
+          <li class="dropdown">
+  <a href="{% url 'destinations' %}">
+    <span>Destinations</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+    <li><a href="{% url 'kenya' %}">Kenya</a></li>
+    <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
+    <li><a href="{% url 'general' %}">General Tours</a></li>
+  </ul>
+</li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{% url 'contact' %}.#contact-form">Book a Trip</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+<div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
+  <div class="container position-relative">
+    <h1>Privacy Policy</h1>
+    <p>Your privacy matters to us. Learn how Mosmak Tours & Travel collects, uses, and protects your information.</p>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li class="current">Privacy Policy</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- End Page Title -->
+
+
+<section id="privacy" class="privacy section">
+  <div class="container" data-aos="fade-up">
+
+    <div class="privacy-header">
+      <div class="header-content">
+        <div class="last-updated">Effective Date: February 27, 2025</div>
+        <h1>Privacy Policy – Mosmak Tours & Travel</h1>
+        <p class="intro-text">
+          At Mosmak Tours & Travel, we respect your privacy and are committed to protecting
+          your personal information. This Privacy Policy explains how we collect, use,
+          store, and safeguard your data when you use our website and services.
+        </p>
+      </div>
+    </div>
+
+    <div class="privacy-content">
+
+      <!-- 1 -->
+      <div class="content-section">
+        <h2>1. Information We Collect</h2>
+        <p>We collect information necessary to provide travel bookings, customer support, and personalized travel experiences.</p>
+
+        <h3>a) Information You Provide</h3>
+        <ul>
+          <li>Full name</li>
+          <li>Email address and phone number</li>
+          <li>Passport or identification details (when required for bookings)</li>
+          <li>Payment details for reservations</li>
+          <li>Special travel preferences or dietary requirements</li>
+        </ul>
+
+        <h3>b) Automatically Collected Information</h3>
+        <ul>
+          <li>IP address and device information</li>
+          <li>Browser type</li>
+          <li>Pages visited and time spent on our website</li>
+          <li>Cookies and tracking technologies</li>
+        </ul>
+      </div>
+
+      <!-- 2 -->
+      
+      <div class="content-section">
+        <h2>2. Sharing of Information</h2>
+        <p>We do not sell your personal information.</p>
+        <p>However, we may share necessary information with:</p>
+        <ul>
+          <li>Hotels, tour guides, and transport providers to fulfill your bookings</li>
+          <li>Payment processors to complete transactions securely</li>
+          <li>Government authorities when legally required</li>
+        </ul>
+      </div>
+
+      <!-- 3 -->
+      <div class="content-section">
+        <h2>3. Data Security</h2>
+        <p>
+          We implement appropriate technical and organizational security measures to
+          protect your personal information from unauthorized access, misuse, or disclosure.
+          Our website uses secure connections (SSL encryption) where applicable.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="content-section">
+        <h2>4. Cookies</h2>
+        <p>
+          Our website may use cookies to enhance user experience, analyze website traffic,
+          and improve functionality. You may disable cookies in your browser settings,
+          though some features of the website may not function properly.
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="content-section">
+        <h2>5. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Request access to your personal information</li>
+          <li>Request correction of inaccurate data</li>
+          <li>Request deletion of your information where applicable</li>
+          <li>Withdraw consent for marketing communications</li>
+        </ul>
+      </div>
+
+      <!-- 6 -->
+      <div class="content-section">
+        <h2>6. Third-Party Links</h2>
+        <p>
+          Our website may contain links to third-party websites. We are not responsible
+          for the privacy practices of those external sites.
+        </p>
+      </div>
+
+      <!-- 7 -->
+      <div class="content-section">
+        <h2>7. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. Updates will be posted on this page,
+          and the effective date will be revised accordingly.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="privacy-contact">
+      <h2>Contact Us</h2>
+      <p>If you have questions about this Privacy Policy, please contact us:</p>
+      <div class="contact-details">
+        <p><strong>Mosmak Tours & Travel</strong></p>
+        <p><strong>Email:</strong> info@mosmaktours.com</p>
+        <p><strong>Phone:</strong> +254701800394</p>
+        <p><strong>Location:</strong> Nairobi, Kenya</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Tour</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Nairobi road, Kinda Building</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
+            <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Follow us for quick updates and offers</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak Tours & Travel</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+    
+        Designed by <a href="https://aben.co.ke/">Aben Technologies</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js'%} "></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%} "></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js '%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+</body>
+
+</html>

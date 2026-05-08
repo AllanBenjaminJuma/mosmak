@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Mosmak{% endblock %}</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="{% static 'images/mosmak.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:..." rel="stylesheet">
+
+  {% block css %}{% endblock %}
+</head>
+<body>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

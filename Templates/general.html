@@ -1,0 +1,306 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mosmak Tours &amp; Travel</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/img/mosmak.webp' %}" rel="icon">
+  <link href="{% static 'images/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+ 
+</head>
+
+<body class="tour-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="{% static 'images/img/mosmak.webp' %}" alt="Mosmak Logo">
+        <h1 class="sitename">Mosmak</h1>
+      </a>
+
+       <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          {% comment %} <a href="{% url 'destinations' %}" class="active dropdown "><span>Destinations</span> {% endcomment %}
+          <li class="dropdown">
+  <a href="{% url 'destinations' %}">
+    <span>Destinations</span>
+    <i class="bi bi-chevron-down toggle-dropdown"></i>
+  </a>
+  <ul>
+    <li><a href="{% url 'kenya' %}">Kenya</a></li>
+    <li><a href="{% url 'tanzania' %}">Tanzania</a></li>
+    <li><a href="{% url 'general' %}">General Tours</a></li>
+  </ul>
+</li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{% url 'contact' %}">Book a Trip</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/img/travel/sunset-mosmak.webp' %});">
+      <div class="container position-relative">
+        <h1>Tour Details</h1>
+        
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Tour Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Travel Tour Details Section -->
+    <section id="travel-tour-details" class="travel-tour-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+       <!-- Hero Section -->
+<div class="tour-hero">
+  <div class="hero-image-wrapper">
+    <img src="{% static 'images/img/travel/mara-migration-wilderbeast-mosmak.jpeg' %}" alt="Masai Mara Safari" class="img-fluid w-100">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Masai Mara Safari Experience</h1>
+        <div class="hero-meta">
+          <span class="duration"><i class="bi bi-calendar"></i> Flexible Duration</span>
+          <span class="destination"><i class="bi bi-geo-alt"></i> Masai Mara, Kenya</span>
+          <span class="rating"><i class="bi bi-star-fill"></i> Top Rated Safari</span>
+        </div>
+        <p class="hero-tagline">Discover Africa’s most iconic wildlife destination with expertly guided safari adventures</p>
+        <a href="{% url 'contact' %}" class="btn-book">Contact Us to Plan Your Safari</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tour Overview -->
+<div class="tour-overview" data-aos="fade-up" data-aos-delay="200">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2>Tour Overview</h2>
+      <p>Experience the unmatched beauty of the Masai Mara with Mosmak Tours & Travel. This safari takes you deep into Kenya’s most celebrated wildlife reserve, offering breathtaking landscapes, thrilling game drives, and unforgettable encounters with nature.</p>
+      <p>Our safaris are designed to suit your preferences—whether you're seeking adventure, photography opportunities, or a relaxing escape in the wild. Every detail is carefully planned to ensure a seamless and enriching safari experience.</p>
+    </div>
+    <div class="col-lg-4">
+      <div class="tour-highlights">
+        <h3>Safari Highlights</h3>
+        <ul>
+          <li><i class="bi bi-check-circle"></i> Big Five Game Drives</li>
+          <li><i class="bi bi-check-circle"></i> Expert Safari Guides</li>
+          <li><i class="bi bi-check-circle"></i> Luxury & Midrange Lodges</li>
+          <li><i class="bi bi-check-circle"></i> Great Migration (Seasonal)</li>
+          <li><i class="bi bi-check-circle"></i> Cultural Maasai Visits</li>
+          <li><i class="bi bi-check-circle"></i> Optional Balloon Safari</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Itinerary -->
+<div class="tour-itinerary" data-aos="fade-up" data-aos-delay="300">
+  <h2>Sample Safari Itinerary</h2>
+  <div class="itinerary-timeline">
+
+    <div class="itinerary-item">
+      <div class="day-number">Day 1</div>
+      <div class="day-content">
+        <h4>Arrival & Transfer to Masai Mara</h4>
+        <p>Depart from Nairobi and enjoy a scenic drive to the Masai Mara. Arrive at your lodge or camp in time for lunch, followed by an afternoon game drive.</p>
+      </div>
+    </div>
+
+    <div class="itinerary-item">
+      <div class="day-number">Day 2</div>
+      <div class="day-content">
+        <h4>Full Day Game Drives</h4>
+        <p>Spend the day exploring the vast plains of the Masai Mara. Track the Big Five and enjoy close encounters with wildlife in their natural habitat.</p>
+      </div>
+    </div>
+
+    <div class="itinerary-item">
+      <div class="day-number">Day 3</div>
+      <div class="day-content">
+        <h4>Optional Activities & Exploration</h4>
+        <p>Choose from optional experiences such as a hot air balloon safari or a cultural visit to a Maasai village. Afternoon game drive continues.</p>
+      </div>
+    </div>
+
+    <div class="itinerary-item">
+      <div class="day-number">Day 4</div>
+      <div class="day-content">
+        <h4>Return to Nairobi</h4>
+        <p>Enjoy a morning game drive before departing back to Nairobi with unforgettable safari memories.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Inclusions -->
+<div class="tour-inclusions" data-aos="fade-up" data-aos-delay="400">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="included-section">
+        <h3><i class="bi bi-check-circle-fill"></i> What's Included</h3>
+        <ul class="inclusion-list included">
+          <li><i class="bi bi-check"></i> Transport in safari vehicle</li>
+          <li><i class="bi bi-check"></i> Professional safari guide</li>
+          <li><i class="bi bi-check"></i> Accommodation (lodges/camps)</li>
+          <li><i class="bi bi-check"></i> Park entry fees</li>
+          <li><i class="bi bi-check"></i> Game drives</li>
+          <li><i class="bi bi-check"></i> Meals as per itinerary</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="excluded-section">
+        <h3><i class="bi bi-x-circle-fill"></i> What's Not Included</h3>
+        <ul class="inclusion-list excluded">
+          <li><i class="bi bi-x"></i> Personal expenses</li>
+          <li><i class="bi bi-x"></i> Travel insurance</li>
+          <li><i class="bi bi-x"></i> Tips and gratuities</li>
+          <li><i class="bi bi-x"></i> Optional activities (balloon safari, etc.)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Final CTA -->
+<div class="final-cta" data-aos="fade-up" data-aos-delay="1000">
+  <div class="cta-content">
+    <h2>Ready for Your Safari Adventure?</h2>
+    <p>Contact Mosmak Tours & Travel today and let us help you plan an unforgettable journey through Kenya’s most breathtaking destinations.</p>
+    <div class="cta-actions">
+      <a href="{% url 'contact' %}" class="btn-primary">Contact Us</a>
+      <a href="tel:+254701800394" class="btn-secondary">Call Us</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+    </section><!-- /Travel Tour Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Mosmak</span>
+          </a>
+          <div class="footer-contact pt-3">
+        <p>Nairobi road,Kinda Building</p>
+        <p>Nairobi, Kenya</p>
+        <p class="mt-3"><strong>Phone:</strong> <span>+254701800394</span></p>
+        <p><strong>Email:</strong> <span>info@mosmak.co.ke</span></p>
+      </div>
+    </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'destinations'%} ">Tours</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Follow us for quick updates and offers</p>
+          <div class="social-links d-flex">
+            
+            <a href="x.com"><i class="bi bi-twitter-x"></i></a>
+            <a href="facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="tiktok.com"><i class="bi bi-tiktok"></i></a>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mosmak</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        
+        Designed by <a href="https://aben.co.ke/">Aben Technologies</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+ <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js'%} "></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%} "></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js '%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/254701800394?text=Hello%20I%20would%20like%20more%20information"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+</body>
+
+</html>
